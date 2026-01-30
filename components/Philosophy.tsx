@@ -8,13 +8,13 @@ export default function Philosophy() {
                     <div>
                         <span className="text-stainless text-sm tracking-[0.2em] uppercase mb-4 block">The Code</span>
                         <h2 className="text-4xl md:text-6xl font-heading text-white uppercase leading-tight mb-8">
-                            We Don't Just Build Cars; <br />
+                            We Don&apos;t Just Build Cars; <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-stainless">
                                 We Engineer Solutions.
                             </span>
                         </h2>
                         <p className="text-stainless/80 text-lg leading-relaxed max-w-xl mb-12">
-                            Whether it’s a TIG-welded 304 stainless exhaust or a critical aluminum repair, the approach remains the same: <strong className="text-white font-normal">Craftsmanship First</strong>. We believe that every weld, every bend, and every bracket serves a purpose beyond aesthetics.
+                            Whether it&apos;s a TIG-welded 304 stainless exhaust or a critical aluminum repair, the approach remains the same: <strong className="text-white font-normal">Craftsmanship First</strong>. We believe that every weld, every bend, and every bracket serves a purpose beyond aesthetics.
                         </p>
 
                         <div className="grid grid-cols-2 gap-8 border-t border-white/10 pt-8">

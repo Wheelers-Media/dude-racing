@@ -52,7 +52,7 @@ export default function FabricationPage() {
                     </h3>
                     <ul className="space-y-2 text-stainless font-light">
                         <li>• Schedule 10/40 Manifolds</li>
-                        <li>• Custom Downpipes (3" - 5")</li>
+                        <li>• Custom Downpipes (3&quot; - 5&quot;)</li>
                         <li>• Wastegate Dump Tubes</li>
                         <li>• V-Band Conversions</li>
                     </ul>
@@ -88,10 +88,10 @@ export default function FabricationPage() {
                 <h2 className="text-3xl font-heading text-white uppercase tracking-widest mb-6">Why We Back-Purge</h2>
                 <div className="prose prose-invert prose-lg max-w-none">
                     <p className="text-lg leading-relaxed font-light">
-                        <strong className="text-white font-bold">Oxidation is the enemy.</strong> At DudeRacing, all stainless steel exhaust components are back-purged with argon. This prevents "sugaring" (internal crystallization) inside the pipe, ensuring laminar flow and preventing structural cracking under thermal cycling.
+                        <strong className="text-white font-bold">Oxidation is the enemy.</strong> At DudeRacing, all stainless steel exhaust components are back-purged with argon. This prevents &quot;sugaring&quot; (internal crystallization) inside the pipe, ensuring laminar flow and preventing structural cracking under thermal cycling.
                     </p>
                     <p className="text-stainless text-base mt-4">
-                        Many shops skip this step to save gas and time. We don't. A weld that looks good on the outside but is crystallized on the inside creates turbulence and weak points. Whether it's a 700hp manifold or a simple exhaust repair, the atmosphere is purged before the arc is struck.
+                        Many shops skip this step to save gas and time. We don&apos;t. A weld that looks good on the outside but is crystallized on the inside creates turbulence and weak points. Whether it&apos;s a 700hp manifold or a simple exhaust repair, the atmosphere is purged before the arc is struck.
                     </p>
                 </div>
             </div>

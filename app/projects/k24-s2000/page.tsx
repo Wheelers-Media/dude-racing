@@ -30,7 +30,7 @@ export default function K24S2000Page() {
                         The client approached us with a clear but difficult goal: <strong>700 wheel horsepower</strong> in a street-driven Honda S2000, while retaining full air conditioning and power steering. In the tight confines of the S2000 engine bay, space is the enemy.
                     </p>
                     <p>
-                        Standard off-the-shelf turbo kits required sacrificing the A/C compressor or relocating the battery to the trunk—compromises the client wasn't willing to make. We needed a clean-sheet design.
+                        Standard off-the-shelf turbo kits required sacrificing the A/C compressor or relocating the battery to the trunk—compromises the client wasn&apos;t willing to make. We needed a clean-sheet design.
                     </p>
                 </div>
             </section>
@@ -54,14 +54,14 @@ export default function K24S2000Page() {
                         </div>
                         <div className="flex-1 bg-carbon border border-white/10 relative group overflow-hidden">
                             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1535136829763-eb5e638d01eb?q=80&w=2056&auto=format&fit=crop')] bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-500" />
-                            <div className="absolute bottom-4 left-4 bg-black/80 px-3 py-1 text-xs font-mono text-white">3.5" Downpipe</div>
+                            <div className="absolute bottom-4 left-4 bg-black/80 px-3 py-1 text-xs font-mono text-white">3.5&quot; Downpipe</div>
                         </div>
                     </div>
                 </div>
 
                 <div className="prose prose-invert prose-lg max-w-none mt-8">
                     <p>
-                        We engineered a custom "Sidewinder" style manifold using SCH10 304 Stainless Steel. By carefully routing the runners forward and mounting the BorgWarner EFR 8374 aside the engine block, we cleared the OEM A/C lines and the frame rail.
+                        We engineered a custom &quot;Sidewinder&quot; style manifold using SCH10 304 Stainless Steel. By carefully routing the runners forward and mounting the BorgWarner EFR 8374 aside the engine block, we cleared the OEM A/C lines and the frame rail.
                     </p>
                 </div>
             </section>

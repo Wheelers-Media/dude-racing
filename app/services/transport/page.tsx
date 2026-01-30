@@ -95,7 +95,7 @@ export default function TransportPage() {
                         <strong className="text-white font-bold">Standard towing creates risk.</strong> Our enclosed transport eliminates it. We use wheel-net tie-downs (never chassis hooks) to ensure your suspension geometry stays true.
                     </p>
                     <p className="text-stainless text-base mt-4">
-                        Whether it's a trip to the paint shop or delivery to a car show in Calgary, we treat the logistics with the same precision as the fabrication. No road debris, no weather exposure, and absolutely no scraping. Your build arrives exactly as it left.
+                        Whether it&apos;s a trip to the paint shop or delivery to a car show in Calgary, we treat the logistics with the same precision as the fabrication. No road debris, no weather exposure, and absolutely no scraping. Your build arrives exactly as it left.
                     </p>
                 </div>
             </div>

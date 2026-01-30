@@ -89,10 +89,10 @@ export default function EngineBuildingPage() {
                 <h2 className="text-3xl font-heading text-white uppercase tracking-widest mb-6">The Blueprinting Standard</h2>
                 <div className="prose prose-invert prose-lg max-w-none">
                     <p className="text-lg leading-relaxed font-light">
-                        <strong className="text-white font-bold">An engine is only as reliable as its measurements.</strong> We don't just assemble; we blueprint. Every bearing clearance, ring gap, and torque spec is measured and recorded. We define "success" in ten-thousandths of an inch.
+                        <strong className="text-white font-bold">An engine is only as reliable as its measurements.</strong> We don&apos;t just assemble; we blueprint. Every bearing clearance, ring gap, and torque spec is measured and recorded. We define &quot;success&quot; in ten-thousandths of an inch.
                     </p>
                     <p className="text-stainless text-base mt-4">
-                        The factory tolerance is "safe for mass production." Our tolerance is "safe for 8,000 RPM." By meticulously checking mains, rods, and thrust prior to final assembly, we eliminate the variables that cause premature failure. You aren't paying for parts installation; you're paying for peace of mind.
+                        The factory tolerance is &quot;safe for mass production.&quot; Our tolerance is &quot;safe for 8,000 RPM.&quot; By meticulously checking mains, rods, and thrust prior to final assembly, we eliminate the variables that cause premature failure. You aren&apos;t paying for parts installation; you&apos;re paying for peace of mind.
                     </p>
                 </div>
             </div>

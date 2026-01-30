@@ -33,11 +33,11 @@ export default function NotFound() {
                         404
                     </h1>
                     <h2 className="text-xl md:text-2xl font-mono text-stainless uppercase tracking-widest mb-6 border-b border-white/10 pb-6 inline-block">
-                        // Lost The 10mm?
+                        {"//"} Lost The 10mm?
                     </h2>
 
                     <p className="text-gray-400 text-lg mb-10 max-w-lg mx-auto">
-                        Just like that socket, the page you're looking for is gone. It might be under the workbench, or it simply never existed.
+                        Just like that socket, the page you&apos;re looking for is gone. It might be under the workbench, or it simply never existed.
                     </p>
 
                     <Link

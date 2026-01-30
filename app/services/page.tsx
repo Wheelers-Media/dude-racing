@@ -138,7 +138,7 @@ export default function ServicesPage() {
                         One Standard. Regardless of the Job.
                     </h4>
                     <p className="text-xl md:text-2xl text-white font-light leading-relaxed">
-                        "Whether we are transporting a supercar or welding a cracked boat hull, the attention to detail remains absolute. We do not cut corners."
+                        &quot;Whether we are transporting a supercar or welding a cracked boat hull, the attention to detail remains absolute. We do not cut corners.&quot;
                     </p>
                 </div>
 

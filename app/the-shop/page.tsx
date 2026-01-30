@@ -41,13 +41,13 @@ export default function TheShopPage() {
                         </h2>
                         <div className="prose prose-invert prose-lg max-w-none text-stainless font-light space-y-6">
                             <p>
-                                <strong className="text-white font-bold">DudeRacing wasn't founded by a businessman; it was founded by an obsession.</strong>
+                                <strong className="text-white font-bold">DudeRacing wasn&apos;t founded by a businessman; it was founded by an obsession.</strong>
                             </p>
                             <p>
-                                With a background in competitive motorsports, Bob Dudenhoeffer understands that a weld isn't just structural—it's safety. We build cars that perform on the track, not just the trailer.
+                                With a background in competitive motorsports, Bob Dudenhoeffer understands that a weld isn&apos;t just structural—it&apos;s safety. We build cars that perform on the track, not just the trailer.
                             </p>
                             <p>
-                                Every chassis we jig, every engine we blueprint, and every cage we weld is executed with the understanding that it will be pushed to the limit. We don't just fabricate; we engineer for speed.
+                                Every chassis we jig, every engine we blueprint, and every cage we weld is executed with the understanding that it will be pushed to the limit. We don&apos;t just fabricate; we engineer for speed.
                             </p>
                             <Image src="/signature.png" alt="Bob Dudenhoeffer" width={200} height={48} className="h-12 w-auto opacity-50 mt-8" />
                         </div>
@@ -159,7 +159,7 @@ export default function TheShopPage() {
                                     <div>
                                         <h4 className="text-white font-bold uppercase tracking-wide">Serving Peace Country</h4>
                                         <p className="text-stainless/70 text-sm mt-1">
-                                            Located in the heart of the region's industrial sector. Easy access for transport haulers.
+                                            Located in the heart of the region&apos;s industrial sector. Easy access for transport haulers.
                                         </p>
                                     </div>
                                 </div>
