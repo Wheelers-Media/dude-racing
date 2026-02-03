@@ -31,7 +31,7 @@ export default function FabricationPage() {
         { symbol: "SS", name: "304/321 Stainless", number: "Exhaust Systems" },
         { symbol: "Al", name: "6061 Aluminum", number: "Intake & Cooling" },
         { symbol: "Ti", name: "Titanium", number: "Exotic Exhausts" },
-        { symbol: "In", name: "Inconel 625", number: "High-Heat Turbo" },
+        { symbol: "St", name: "Structural", number: "Reinforcement" },
     ];
 
     return (
@@ -70,10 +70,10 @@ export default function FabricationPage() {
                 </div>
                 <div className="md:col-span-2 bg-gradient-to-r from-blue-900/20 to-transparent p-6 border border-blue-500/30">
                     <h3 className="text-xl font-heading text-white uppercase tracking-wider mb-4 flex items-center gap-2">
-                        <span className="text-blue-400">⚡</span> Welding Repair Services
+                        <span className="text-blue-400">⚡</span> Structural Reinforcement
                     </h3>
                     <p className="text-stainless mb-4 text-sm max-w-2xl">
-                        We serve the local industrial and recreational market with the same precision we apply to race cars.
+                        We don&apos;t just patch; we reinforce. Whether it&apos;s a cracked aluminum boat hull or a heavy equipment boom, our repairs are engineered to be stronger than the factory original.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-white font-mono">
                         <div className="bg-carbon border border-white/10 p-3">Aluminum Boat Hulls</div>

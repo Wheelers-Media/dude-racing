@@ -20,11 +20,11 @@ export default function TransportPage() {
     // 2. The Stats Grid (Adapted for Logistics)
     const specs = [
         { label: "Insurance", value: "Fully Insured Cargo" },
-        { label: "Deck Width", value: "8.5ft (Widebody)" },
-        { label: "Ramps", value: "Ultra-Low Approach" },
+        { label: "Trailer Length", value: "26ft Enclosed" },
+        { label: "Climate", value: "Fully Heated" },
         { label: "Region", value: "AB / BC / SK" },
-        { label: "Tie-Downs", value: "E-Track Wheel Nets" },
-        { label: "Winch", value: "12,000lb Recovery" },
+        { label: "Tie-Downs", value: "Full E-Track System" },
+        { label: "Winch", value: "Loading Assistance" },
     ];
 
     // 4. Icons (Logistics Focused)
@@ -39,7 +39,8 @@ export default function TransportPage() {
         <ServicePageLayout
             title="Premium Transport"
             subtitle="Enclosed / Insured / Low-Clearance"
-            heroImage="https://images.unsplash.com/photo-1617788138017-80ad40651399?q=80&w=2670&auto=format&fit=crop" // Porsche/Trailer shot vibe
+            heroImage="/transport.jpg" // Porsche/Trailer shot vibe
+            heroImagePosition="center 35%"
             timelineSteps={timeline}
             specs={specs}
             materials={materials}
@@ -80,7 +81,7 @@ export default function TransportPage() {
                         Bought a shell? Blowing an engine at the track? We have the gear to get it home.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-white font-mono">
-                        <div className="bg-carbon border border-white/10 p-3">12,000lb Warn Winch</div>
+                        <div className="bg-carbon border border-white/10 p-3">Winch Loading Assistance Available</div>
                         <div className="bg-carbon border border-white/10 p-3">Snatch Blocks / Soft Shackles</div>
                         <div className="bg-carbon border border-white/10 p-3">Rolling Chassis Support</div>
                     </div>

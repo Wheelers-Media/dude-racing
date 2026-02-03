@@ -2,8 +2,10 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import DarkMap from "@/components/ui/DarkMap";
 import { MapPin, Clock, Truck, Instagram } from "lucide-react";
 import Image from "next/image";
+
 
 export default function TheShopPage() {
     return (
@@ -17,7 +19,7 @@ export default function TheShopPage() {
                     {/* Industrial Cathedral Image */}
                     <div
                         className="w-full h-full bg-cover bg-center opacity-60 mix-blend-overlay grayscale contrast-125"
-                        style={{ backgroundImage: `url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2544&auto=format&fit=crop')` }}
+                        style={{ backgroundImage: `url('/HQ-Hero.jpg')` }}
                     />
                 </div>
 
@@ -26,7 +28,7 @@ export default function TheShopPage() {
                         Headquarters
                     </h1>
                     <p className="text-stainless text-lg md:text-xl font-mono uppercase tracking-widest border-t border-white/20 pt-4 mt-4 inline-block">
-                        Est. 2026 // Grande Prairie, AB
+                        Est. 2018 // Grande Prairie, AB
                     </p>
                 </div>
             </section>
@@ -41,7 +43,7 @@ export default function TheShopPage() {
                         </h2>
                         <div className="prose prose-invert prose-lg max-w-none text-stainless font-light space-y-6">
                             <p>
-                                <strong className="text-white font-bold">DudeRacing wasn&apos;t founded by a businessman; it was founded by an obsession.</strong>
+                                <strong className="text-white font-bold">DudeRacing wasn&apos;t founded by a businessman; it was founded by a passion.</strong>
                             </p>
                             <p>
                                 With a background in competitive motorsports, Bob Dudenhoeffer understands that a weld isn&apos;t just structural—it&apos;s safety. We build cars that perform on the track, not just the trailer.
@@ -49,14 +51,13 @@ export default function TheShopPage() {
                             <p>
                                 Every chassis we jig, every engine we blueprint, and every cage we weld is executed with the understanding that it will be pushed to the limit. We don&apos;t just fabricate; we engineer for speed.
                             </p>
-                            <Image src="/signature.png" alt="Bob Dudenhoeffer" width={200} height={48} className="h-12 w-auto opacity-50 mt-8" />
                         </div>
                     </div>
                     <div className="order-1 lg:order-2 relative h-[600px] border border-white/10 group">
                         <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10" />
                         <div
                             className="w-full h-full bg-cover bg-center grayscale contrast-110 hover:grayscale-0 transition-all duration-700"
-                            style={{ backgroundImage: `url('https://images.unsplash.com/photo-1504222490245-430eaae9bd19?q=80&w=2663&auto=format&fit=crop')` }}
+                            style={{ backgroundImage: `url('/headshot.jpg')` }}
                         />
                         <div className="absolute bottom-4 right-4 z-20 bg-black/80 backdrop-blur px-4 py-2 border border-white/10">
                             <span className="text-xs font-mono text-stainless uppercase tracking-widest">Bob Dudenhoeffer // Founder</span>
@@ -75,15 +76,15 @@ export default function TheShopPage() {
                         {[
                             {
                                 category: "Welding & Alloy",
-                                items: ["Miller Dynasty 400 TIG Runners", "Ck Worldwide Torches", "Back-Purge Flow Meters", "Cast Iron Restoration Oven", "Liquid Cooled Chiller Systems"]
+                                items: ["Everlast EXT 255 (AC/DC TIG)", "Everlast 253 DPI", "Back-Purge Flow Meters", "Mobile Hoist & TIG Setup"]
                             },
                             {
                                 category: "Fabrication",
-                                items: ["JD Squared Model 32 Tube Bender", "Vertical Bandsaw (Hydraulic Feed)", "Certiflat Jig & Fixture Tables", "Baileigh Bead Roller", "Bridgeport Vertical Mill"]
+                                items: ["JD Squared Model 32 Tube Bender", "Vertical Bandsaw (Hydraulic Feed)"]
                             },
                             {
-                                category: "Design & QC",
-                                items: ["SolidWorks CAD Suite", "3D Scanning Capability", "Faro Gage Inspection Arm", "Ultrasonic Thickness Gauge", "Digital Blueprinting Tools"]
+                                category: "Prep & Finishing",
+                                items: ["Precision Tube Notcher", "Abrasive Cut-Off Saws", "2x72 Belt Grinder (Fitment)", "Exhaust Pressure Testers", "Ultrasonic Parts Cleaner"]
                             }
                         ].map((category, idx) => (
                             <div key={idx} className="space-y-6">
@@ -107,18 +108,19 @@ export default function TheShopPage() {
                 <section>
                     <div className="flex items-center justify-between mb-12">
                         <h2 className="text-4xl font-heading text-white uppercase tracking-wider">Shop Floor Live</h2>
-                        <a href="https://instagram.com" target="_blank" className="flex items-center gap-2 text-stainless hover:text-white transition-colors">
+                        <a href="https://www.instagram.com/duderacing" target="_blank" className="flex items-center gap-2 text-stainless hover:text-white transition-colors">
                             <Instagram className="w-5 h-5" /> <span className="text-sm font-mono uppercase tracking-widest">@duderacing</span>
                         </a>
                     </div>
+
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2">
                         {[
-                            "https://images.unsplash.com/photo-1610444695034-780c2f829f03?q=80&w=2670&auto=format&fit=crop", // Sparks
-                            "https://images.unsplash.com/photo-1588612143003-85fbf8f547c1?q=80&w=2670&auto=format&fit=crop", // Coffee & Sketches
-                            "https://images.unsplash.com/photo-1628522307371-2ab6c55653b6?q=80&w=2670&auto=format&fit=crop", // Engine Block
-                            "https://images.unsplash.com/photo-1530046339160-ce3e41600f2e?q=80&w=2574&auto=format&fit=crop", // Welding
-                            "https://images.unsplash.com/photo-1606821466870-7607a7266946?q=80&w=2574&auto=format&fit=crop", // Tools
-                            "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=2670&auto=format&fit=crop", // Messy workbench
+                            "/Shop Floor Live/DSC07256.jpg",
+                            "/Shop Floor Live/DSC07230.jpg",
+                            "/Shop Floor Live/569184263_1259522549547349_8536754707826462352_n.jpg",
+                            "/Shop Floor Live/594200037_1296749179158019_4495136581949991320_n.jpg",
+                            "/Shop Floor Live/614758521_1327588456074091_6438086883897970748_n.jpg",
+                            "/Shop Floor Live/IMG_5497.jpg" // Converted HEIC replacement
                         ].map((src, idx) => (
                             <div key={idx} className="relative aspect-square bg-carbon overflow-hidden group">
                                 <div
@@ -135,15 +137,8 @@ export default function TheShopPage() {
                 <section className="bg-carbon border border-white/10">
                     <div className="grid grid-cols-1 lg:grid-cols-2">
                         {/* Map */}
-                        <div className="relative h-[400px] lg:h-auto bg-neutral-800 overflow-hidden">
-                            <div
-                                className="absolute inset-0 bg-cover bg-center grayscale invert contrast-125 opacity-70"
-                                style={{ backgroundImage: `url('https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2674&auto=format&fit=crop')` }}
-                            />
-                            <div className="absolute inset-0 bg-blue-900/20 mix-blend-overlay" />
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                                <MapPin className="w-12 h-12 text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]" />
-                            </div>
+                        <div className="relative h-[400px] lg:h-auto bg-neutral-800 overflow-hidden min-h-[500px]">
+                            <DarkMap />
                         </div>
 
                         {/* Data */}

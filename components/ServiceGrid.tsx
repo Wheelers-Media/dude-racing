@@ -12,8 +12,8 @@ const services = [
         icon: Wrench,
     },
     {
-        title: "Engine Builds",
-        items: ["K-Swaps", "Engine Blueprinting", "Head Porting", "Custom Harnesses"],
+        title: "Performance Exhausts",
+        items: ["Stainless Steel Specialists", "304/321 Grade", "TIG Welded", "Custom Headers & Downpipes"],
         icon: Settings,
     },
 ];

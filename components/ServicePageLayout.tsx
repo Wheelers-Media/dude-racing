@@ -31,9 +31,11 @@ interface ServicePageLayoutProps {
     materials: MaterialItem[];
     leadTime: string;
     children?: React.ReactNode;
+    heroImagePosition?: string;
     timelineTitle?: string;
     specsTitle?: string;
     materialsTitle?: string;
+    overlayClassName?: string;
 }
 
 export default function ServicePageLayout({
@@ -45,9 +47,11 @@ export default function ServicePageLayout({
     materials,
     leadTime,
     children,
+    heroImagePosition = "center",
     timelineTitle = "Engineering Process",
     specsTitle = "Technical Specifications",
     materialsTitle = "Material Expertise",
+    overlayClassName = "bg-black/50",
 }: ServicePageLayoutProps) {
     const [modalOpen, setModalOpen] = useState(false);
 
@@ -58,11 +62,14 @@ export default function ServicePageLayout({
             {/* 1. Hero Section (Technical) */}
             <section className="relative w-full h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden border-b border-white/10">
                 <div className="absolute inset-0 bg-neutral-900 z-0">
-                    <div className="absolute inset-0 bg-black/50 z-10" />
+                    <div className={`absolute inset-0 ${overlayClassName} z-10`} />
                     {/* Image Texture */}
                     <div
-                        className="w-full h-full bg-cover bg-center opacity-60 mix-blend-overlay grayscale contrast-125"
-                        style={{ backgroundImage: `url('${heroImage}')` }}
+                        className="w-full h-full bg-cover opacity-60 mix-blend-overlay grayscale contrast-125"
+                        style={{
+                            backgroundImage: `url('${heroImage}')`,
+                            backgroundPosition: heroImagePosition
+                        }}
                     />
                 </div>
 

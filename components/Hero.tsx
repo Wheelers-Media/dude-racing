@@ -20,6 +20,8 @@ export default function Hero() {
                     <div className="absolute inset-0 bg-black/60 z-10" />
                     {/* Simulating video texture */}
                     <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-40 mix-blend-overlay" />
+                    {/* Gradient Fade to seamless bar */}
+                    <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#1A1A1A] to-transparent z-10" />
                 </div>
 
                 <div className="relative z-20 max-w-[1400px] mx-auto px-6 flex flex-col items-center text-center">
@@ -39,28 +41,27 @@ export default function Hero() {
                     <div className="flex flex-col md:flex-row gap-6 w-full max-w-xl">
                         <button
                             onClick={() => openModal("build")}
-                            className="flex-1 bg-white text-black font-heading font-bold uppercase h-14 tracking-widest hover:bg-stainless transition-colors rounded-none"
+                            className="flex-1 bg-white text-black font-heading font-bold uppercase h-14 tracking-widest hover:bg-signal hover:text-black hover:border-signal transition-colors rounded-none border border-transparent"
                         >
-                            Custom Performance Builds
+                            Custom Fabrication
                         </button>
                         <button
                             onClick={() => openModal("service")}
-                            className="flex-1 bg-transparent border border-stainless text-stainless font-heading font-bold uppercase h-14 tracking-widest hover:border-white hover:text-white transition-colors rounded-none"
+                            className="flex-1 bg-transparent border border-stainless text-stainless font-heading font-bold uppercase h-14 tracking-widest hover:border-arc hover:text-arc transition-colors rounded-none"
                         >
-                            Regional Services
+                            Repair & Mobile Welding
                         </button>
                     </div>
                 </div>
 
-                {/* Trust Signals */}
-                <div className="absolute bottom-10 left-0 w-full z-20 border-t border-white/5 pt-8 bg-gradient-to-t from-black/80 to-transparent">
-                    <div className="max-w-[1400px] mx-auto px-6 flex justify-center md:justify-between items-center gap-8 opacity-50 overflow-hidden">
-                        {/* Placeholder for Logos */}
-                        <span className="text-xs uppercase tracking-widest font-heading">BorgWarner</span>
-                        <span className="text-xs uppercase tracking-widest font-heading">Vibrant Performance</span>
-                        <span className="text-xs uppercase tracking-widest font-heading">Miller Welders</span>
-                        <span className="text-xs uppercase tracking-widest font-heading">Garrett</span>
-                        <span className="text-xs uppercase tracking-widest font-heading">Holley</span>
+                {/* Trust Signals - Machined Seam Look */}
+                <div className="absolute bottom-6 left-0 w-full z-20 border-y border-white/5 py-3 md:py-4 bg-noise">
+                    <div className="max-w-[1400px] mx-auto px-6 flex flex-wrap md:flex-nowrap justify-center md:justify-between items-center gap-x-6 gap-y-3 opacity-70 overflow-hidden">
+                        <span className="text-xs md:text-sm uppercase tracking-widest font-heading font-bold text-center">BorgWarner</span>
+                        <span className="text-xs md:text-sm uppercase tracking-widest font-heading font-bold text-center">Vibrant Performance</span>
+                        <span className="text-xs md:text-sm uppercase tracking-widest font-heading font-bold text-center">Everlast Welders</span>
+                        <span className="text-xs md:text-sm uppercase tracking-widest font-heading font-bold text-center">Nelson Racing Turbos</span>
+                        <span className="text-xs md:text-sm uppercase tracking-widest font-heading font-bold text-center">Garrett</span>
                     </div>
                 </div>
             </section>

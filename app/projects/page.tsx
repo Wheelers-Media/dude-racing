@@ -37,7 +37,7 @@ export default function ProjectsPage() {
                             <div className="relative h-[400px] lg:h-auto overflow-hidden">
                                 <div
                                     className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                                    style={{ backgroundImage: `url('https://images.unsplash.com/photo-1600706432502-763d53b26c06?q=80&w=2670&auto=format&fit=crop')` }} // Placeholder for Z
+                                    style={{ backgroundImage: `url('/LS-370Z.jpg')` }} // LS 370Z
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
                             </div>
@@ -45,7 +45,7 @@ export default function ProjectsPage() {
                             <div className="p-8 lg:p-12 flex flex-col justify-center">
                                 <div className="flex gap-2 mb-4 flex-wrap">
                                     {["Tube Chassis", "LS Swap", "Mirror Turbos"].map(tag => (
-                                        <span key={tag} className="text-[10px] font-mono uppercase tracking-widest text-stainless border border-white/20 px-2 py-1 rounded-full">
+                                        <span key={tag} className="text-[10px] font-mono uppercase tracking-widest text-arc border border-arc/30 bg-arc/5 px-2 py-1 rounded-full">
                                             {tag}
                                         </span>
                                     ))}
@@ -71,14 +71,14 @@ export default function ProjectsPage() {
                             <div className="group relative h-[500px] border border-white/10 overflow-hidden bg-carbon flex flex-col justify-end">
                                 <div
                                     className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                                    style={{ backgroundImage: `url('https://images.unsplash.com/photo-1542282088-fe8426682b8f?q=80&w=2574&auto=format&fit=crop')` }} // Placeholder for S2000
+                                    style={{ backgroundImage: `url('/s2000.jpg')` }} // K-Swapped S2000
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90 group-hover:opacity-80 transition-opacity" />
 
                                 <div className="relative z-20 p-8">
                                     <div className="flex gap-2 mb-3 flex-wrap">
                                         {["Fabrication", "Turbo System", "Stainless"].map(tag => (
-                                            <span key={tag} className="text-[10px] font-mono uppercase tracking-widest text-stainless border border-white/20 px-2 py-1 rounded-full">
+                                            <span key={tag} className="text-[10px] font-mono uppercase tracking-widest text-signal border border-signal/30 bg-signal/5 px-2 py-1 rounded-full">
                                                 {tag}
                                             </span>
                                         ))}
@@ -102,7 +102,7 @@ export default function ProjectsPage() {
                             <div className="group relative h-[500px] border border-white/10 overflow-hidden bg-carbon flex flex-col justify-end">
                                 <div
                                     className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                                    style={{ backgroundImage: `url('https://images.unsplash.com/photo-1571401835393-8c5f35328320?q=80&w=2574&auto=format&fit=crop')` }} // Placeholder for Truck
+                                    style={{ backgroundImage: `url('/Winterized-F-350.jpg')` }} // Winterized F-350
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90 group-hover:opacity-80 transition-opacity" />
 

@@ -33,7 +33,7 @@ export default function Philosophy() {
                         {/* Visual: Use a "Dime Stack" macro weld image placeholder */}
                         <div className="w-full h-full relative bg-neutral-800 overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
                             {/* Placeholder for weld image */}
-                            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-60"></div>
+                            <div className="absolute inset-0 bg-[url('/tig-welding.jpg')] bg-cover bg-center opacity-60"></div>
                             <div className="absolute bottom-8 left-8 bg-black/80 backdrop-blur px-6 py-3 border-l-2 border-white">
                                 <span className="text-white text-xs font-heading tracking-widest uppercase">Precision TIG Welding</span>
                             </div>

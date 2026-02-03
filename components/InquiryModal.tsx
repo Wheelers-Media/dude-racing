@@ -153,7 +153,7 @@ export default function InquiryModal({ isOpen, onClose, initialType }: InquiryMo
                                     Inquiry Form
                                 </span>
                                 <h2 className="text-2xl md:text-3xl font-heading text-white uppercase tracking-wider">
-                                    {isService ? "Local Fabrication & Repair" : "Start A Custom Build"}
+                                    {isService ? "Local Fabrication & Repair" : "Start A Custom Project"}
                                 </h2>
                             </div>
 
@@ -167,9 +167,11 @@ export default function InquiryModal({ isOpen, onClose, initialType }: InquiryMo
                                             <select
                                                 value={formData.serviceType}
                                                 onChange={(e) => handleInputChange("serviceType", e.target.value)}
-                                                className="w-full bg-page-bg border border-white/20 text-white p-3 rounded-none focus:border-white outline-none font-mono text-sm"
+                                                className="w-full bg-page-bg border border-white/20 text-white p-3 rounded-none focus:border-signal outline-none font-mono text-sm"
                                             >
                                                 <option>Welding Repair</option>
+                                                <option>Performance Exhaust System</option>
+                                                <option>Mobile Welding / Repair</option>
                                                 <option>Aluminum Fabrication</option>
                                                 <option>Bolt-on Install</option>
                                                 <option>Transport</option>
@@ -264,7 +266,7 @@ export default function InquiryModal({ isOpen, onClose, initialType }: InquiryMo
                                                 <p className="text-xs text-stainless mb-4">Serious inquiries only. Quality fabrication requires appropriate funding.</p>
 
                                                 <div className="grid grid-cols-1 gap-3">
-                                                    {["$10k - $25k", "$25k - $50k", "$50k+", "Undetermined"].map((opt) => (
+                                                    {["$2,500 - $5,000", "$5,000 - $10,000", "$10,000+", "Undetermined"].map((opt) => (
                                                         <button
                                                             key={opt}
                                                             onClick={() => {
@@ -281,7 +283,7 @@ export default function InquiryModal({ isOpen, onClose, initialType }: InquiryMo
 
                                                 <div className="flex items-center gap-3 text-yellow-500/80 text-xs mt-4 p-3 border border-yellow-500/20 bg-yellow-500/5">
                                                     <AlertTriangle className="w-4 h-4" />
-                                                    <span>Builds under $10k are currently not being accepted.</span>
+                                                    <span>Custom fabrication projects typically start at $2,500.</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -373,7 +375,7 @@ export default function InquiryModal({ isOpen, onClose, initialType }: InquiryMo
                                             <button
                                                 onClick={handleSubmit}
                                                 disabled={isSubmitting}
-                                                className="w-full bg-blue-600 text-white font-heading font-bold uppercase py-4 tracking-widest hover:bg-blue-500 transition-colors rounded-none mt-4 shadow-[0_0_20px_rgba(37,99,235,0.3)] disabled:opacity-50"
+                                                className="w-full bg-arc text-white font-heading font-bold uppercase py-4 tracking-widest hover:bg-blue-600 transition-colors rounded-none mt-4 shadow-[0_0_20px_rgba(59,130,246,0.3)] disabled:opacity-50"
                                             >
                                                 {isSubmitting ? "Submitting..." : "Submit Build Application"}
                                             </button>

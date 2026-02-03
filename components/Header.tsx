@@ -17,7 +17,7 @@ export default function Header() {
     // Dropdown Items
     const serviceItems = [
         { label: "Fabrication", href: "/services/fabrication" },
-        { label: "Engine Builds", href: "/services/engine-building" },
+        { label: "Exhausts", href: "/services/exhausts" },
         { label: "Transport", href: "/services/transport" },
     ];
 
@@ -58,11 +58,11 @@ export default function Header() {
                         </div>
                     </div>
 
-                    <Link href="/the-shop" className="text-stainless hover:text-white uppercase tracking-wider text-sm transition-colors">
+                    <Link href="/the-shop" className="text-stainless hover:text-signal uppercase tracking-wider text-sm transition-colors">
                         The Shop
                     </Link>
 
-                    <Link href="/shop" className="text-yellow-500 hover:text-white uppercase tracking-wider text-sm transition-colors font-bold">
+                    <Link href="/shop" className="text-yellow-500 hover:text-signal uppercase tracking-wider text-sm transition-colors font-bold">
                         Supply
                     </Link>
                 </nav>
@@ -73,7 +73,7 @@ export default function Header() {
                         onClick={() => openModal('build')}
                         className="hidden md:block bg-white text-black font-heading font-bold uppercase px-6 py-3 text-sm tracking-widest hover:bg-stainless transition-colors rounded-none"
                     >
-                        Start A Build
+                        Get A Quote
                     </button>
 
                     <button onClick={toggleMenu} className="md:hidden text-white p-2">
@@ -118,7 +118,7 @@ export default function Header() {
                             }}
                             className="bg-white text-black font-heading font-bold uppercase px-8 py-4 text-lg tracking-widest hover:bg-stainless transition-colors rounded-none w-full"
                         >
-                            Start A Build
+                            Get A Quote
                         </button>
                         <a href="tel:+15875550123" className="text-stainless hover:text-white font-mono text-sm tracking-wider">
                             (587) 555-0123

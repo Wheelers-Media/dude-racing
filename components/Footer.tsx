@@ -18,13 +18,13 @@ export default function Footer() {
                             <Image src="/dude-racing-logo-white.png" alt="DudeRacing" width={150} height={28} className="h-7 w-auto" />
                         </Link>
                         <p className="text-stainless text-sm">
-                            Est. 2026
+                            Est. 2018
                         </p>
                         <div className="flex gap-4">
-                            <a href="#" className="p-2 border border-white/10 text-stainless hover:text-black hover:bg-white hover:border-white transition-all">
+                            <a href="https://www.instagram.com/duderacing" target="_blank" className="p-2 border border-white/10 text-stainless hover:text-black hover:bg-white hover:border-white transition-all">
                                 <Instagram size={18} />
                             </a>
-                            <a href="#" className="p-2 border border-white/10 text-stainless hover:text-black hover:bg-white hover:border-white transition-all">
+                            <a href="https://www.facebook.com/Duderacing" target="_blank" className="p-2 border border-white/10 text-stainless hover:text-black hover:bg-white hover:border-white transition-all">
                                 <Facebook size={18} />
                             </a>
                         </div>
@@ -46,6 +46,11 @@ export default function Footer() {
                                     </Link>
                                 </li>
                             ))}
+                            <li>
+                                <Link href="/services/mobile-repair" className="text-stainless hover:text-white text-sm uppercase tracking-wider transition-colors">
+                                    Mobile Welding Available
+                                </Link>
+                            </li>
                             <li>
                                 <button
                                     onClick={() => openModal('service')}

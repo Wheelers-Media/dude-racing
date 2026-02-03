@@ -13,6 +13,8 @@ const config: Config = {
                 "carbon-light": "#222222",
                 stainless: "#B0B3B5",
                 "page-bg": "#0f0f0f",
+                signal: "#eab308",
+                arc: "#3b82f6",
             },
             fontFamily: {
                 heading: ["var(--font-chakra-petch)", "sans-serif"],

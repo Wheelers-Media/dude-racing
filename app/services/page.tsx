@@ -15,30 +15,29 @@ export default function ServicesPage() {
             title: "Custom Fabrication",
             description: "Turbo systems, exhaust, and chassis work.",
             href: "/services/fabrication",
-            image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2070&auto=format&fit=crop", // Fab Hero
+            image: "/Custom Fabrication.jpg", // Fab Hero
             borderColor: "group-hover:border-blue-500",
         },
         {
-            title: "Engine Building",
-            description: "Blueprinting, swaps, and performance assembly.",
-            href: "/services/engine-building",
-            image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=2664&auto=format&fit=crop", // Engine Hero
+            title: "Performance Exhausts",
+            description: "Custom stainless systems, headers, and valve integration.",
+            href: "/services/exhausts",
+            image: "/exhaust.jpg", // Exhausts Hero
             borderColor: "group-hover:border-red-500",
         },
         {
             title: "Premium Transport",
             description: "Enclosed, insured, low-clearance hauling.",
             href: "/services/transport",
-            image: "https://images.unsplash.com/photo-1617788138017-80ad40651399?q=80&w=2670&auto=format&fit=crop", // Transport Hero
+            image: "/transport-2.jpg", // Transport Hero
             borderColor: "group-hover:border-yellow-500",
         },
     ];
 
     const repairServices = [
         "Aluminum Boat Repair",
-        "Cast Iron Restoration",
-        "Trailer & Equipment Welding",
         "Structural Reinforcement",
+        "Trailer & Equipment Welding",
         "Stainless Exhaust Repair",
         "Titanium Crack Repair"
     ];
