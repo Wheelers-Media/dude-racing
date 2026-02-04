@@ -59,7 +59,7 @@ export default function ServiceGrid() {
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
                         {[
                             { step: "01", title: "CONSULTATION", text: "We assess your goals, timeline, and chassis requirements." },
-                            { step: "02", title: "DESIGN & PREP", text: "Material selection, 3D scanning, and precise fitment planning." },
+                            { step: "02", title: "DESIGN & PREP", text: "Material selection, Mockup & Fitment, and precise planning." },
                             { step: "03", title: "FABRICATION", text: "Aerospace-grade welding and assembly in our controlled shop." },
                             { step: "04", title: "DELIVERY", text: "Quality check, final polish, and secure transport to your door." }
                         ].map((item, i) => (

@@ -2,8 +2,8 @@ import ServicePageLayout from "@/components/ServicePageLayout";
 
 export default function CustomFabricationPage() {
     const timeline = [
-        { title: "Consultation & 3D Scanning", description: "We define project goals and use Creaform 3D scanning to digitize your vehicle's engine bay or chassis." },
-        { title: "CAD Design & Flow Simulation", description: "Components are modeled in SolidWorks. Flow analysis ensures optimal performance before a single cut is made." },
+        { title: "Consultation & Mockup", description: "We define project goals and perform physical mockups to ensure perfect component placement." },
+        { title: "Design & Chassis Prep", description: "Material selection and chassis preparation to handle increased power and flow requirements." },
         { title: "Precision Fabrication", description: "TIG welding with 304SS or Titanium, back-purged for sanitary welds. CNC flange surfacing." },
         { title: "Quality Control", description: "Pressure testing, fitment verification, and ultrasonic weld inspection if required." },
     ];
