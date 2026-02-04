@@ -17,9 +17,16 @@ export default function Hero() {
             <section className="relative w-full h-screen min-h-[800px] flex items-center justify-center overflow-hidden">
                 {/* Background Video Placeholder */}
                 <div className="absolute inset-0 bg-neutral-900 z-0 h-full w-full">
-                    <div className="absolute inset-0 bg-black/60 z-10" />
-                    {/* Simulating video texture */}
-                    <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-40 mix-blend-overlay" />
+                    <div className="absolute inset-0 bg-black/40 z-10" />
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover opacity-60"
+                    >
+                        <source src="/LandingPage-Hero.webm" type="video/webm" />
+                    </video>
                     {/* Gradient Fade to seamless bar */}
                     <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#1A1A1A] to-transparent z-10" />
                 </div>
