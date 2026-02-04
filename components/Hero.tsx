@@ -17,13 +17,13 @@ export default function Hero() {
             <section className="relative w-full h-screen min-h-[800px] flex items-center justify-center overflow-hidden">
                 {/* Background Video Placeholder */}
                 <div className="absolute inset-0 bg-neutral-900 z-0 h-full w-full">
-                    <div className="absolute inset-0 bg-black/40 z-10" />
+                    <div className="absolute inset-0 bg-black/70 z-10" />
                     <video
                         autoPlay
                         loop
                         muted
                         playsInline
-                        className="w-full h-full object-cover opacity-60"
+                        className="w-full h-full object-cover opacity-40"
                     >
                         <source src="/LandingPage-Hero.webm" type="video/webm" />
                     </video>
@@ -45,16 +45,16 @@ export default function Hero() {
                     </p>
 
                     {/* Dual CTA: Split-Intent Strategy */}
-                    <div className="flex flex-col md:flex-row gap-6 w-full max-w-xl">
+                    <div className="flex flex-col md:flex-row gap-6 w-full max-w-xl justify-center">
                         <button
                             onClick={() => openModal("build")}
-                            className="flex-1 bg-white text-black font-heading font-bold uppercase h-14 tracking-widest hover:bg-signal hover:text-black hover:border-signal transition-colors rounded-none border border-transparent"
+                            className="flex-1 bg-white text-black font-heading font-bold uppercase py-5 md:h-14 tracking-widest hover:bg-signal hover:text-black hover:border-signal transition-colors rounded-none border border-transparent"
                         >
                             Custom Fabrication
                         </button>
                         <button
                             onClick={() => openModal("service")}
-                            className="flex-1 bg-transparent border border-stainless text-stainless font-heading font-bold uppercase h-14 tracking-widest hover:border-arc hover:text-arc transition-colors rounded-none"
+                            className="flex-1 bg-transparent border border-stainless text-stainless font-heading font-bold uppercase py-5 md:h-14 tracking-widest hover:border-arc hover:text-arc transition-colors rounded-none"
                         >
                             Repair & Mobile Welding
                         </button>
@@ -62,7 +62,7 @@ export default function Hero() {
                 </div>
 
                 {/* Trust Signals - Machined Seam Look */}
-                <div className="absolute bottom-6 left-0 w-full z-20 border-y border-white/5 py-3 md:py-4 bg-noise">
+                <div className="absolute bottom-0 left-0 w-full z-20 border-t border-white/5 py-3 md:py-4 bg-carbon/90 backdrop-blur-sm">
                     <div className="max-w-[1400px] mx-auto px-6 flex flex-wrap md:flex-nowrap justify-center md:justify-between items-center gap-x-6 gap-y-3 opacity-70 overflow-hidden">
                         <span className="text-xs md:text-sm uppercase tracking-widest font-heading font-bold text-center">BorgWarner</span>
                         <span className="text-xs md:text-sm uppercase tracking-widest font-heading font-bold text-center">Vibrant Performance</span>
