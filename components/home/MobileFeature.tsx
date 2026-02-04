@@ -45,7 +45,7 @@ export default function MobileFeature() {
                 {/* Column 2: Visual */}
                 <div className="flex-1 relative min-h-[400px] md:min-h-auto group overflow-hidden">
                     <Image
-                        src="/transport-2.jpg"
+                        src="/Mobile-Hoist.jpg"
                         alt="DudeRacing Mobile Field Operations"
                         fill
                         className="object-cover grayscale transition-all duration-700 group-hover:grayscale-0 scale-105 group-hover:scale-100"
