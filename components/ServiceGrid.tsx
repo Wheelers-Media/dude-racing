@@ -1,21 +1,36 @@
-import { Wrench, Flame, Settings } from "lucide-react";
+import { Wrench, Flame, Truck } from "lucide-react";
 
-const services = [
+const CAPABILITIES = [
     {
-        title: "Custom Fabrication",
-        items: ["Turbo Manifolds", "Full Exhaust Systems", "Intercooler Piping", "Roll Cages"],
+        title: "CUSTOM FABRICATION",
         icon: Flame,
+        items: [
+            "Turbo Manifolds & Hot Parts",
+            "Full Titanium/Stainless Exhausts",
+            "Intercooler & Intake Piping",
+            "Roll Cages & Chassis Work"
+        ]
     },
     {
-        title: "Welding Repair",
-        items: ["Aluminum Specialist", "Stainless Steel", "Cast Iron Repair", "Titanium"],
+        title: "SPECIALIZED WELDING",
         icon: Wrench,
+        items: [
+            "Aluminum Hull & Cast Restoration",
+            "Exotic Alloys (Inconel, Titanium)",
+            "Cast Iron Block Repair",
+            "Magnesium Valve Covers"
+        ]
     },
     {
-        title: "Performance Exhausts",
-        items: ["Stainless Steel Specialists", "304/321 Grade", "TIG Welded", "Custom Headers & Downpipes"],
-        icon: Settings,
-    },
+        title: "SECURE LOGISTICS",
+        icon: Truck,
+        items: [
+            "Enclosed Trailer Transport",
+            "Door-to-Door Chassis Pickup",
+            "Non-Running Vehicle Recovery",
+            "Regional Peace Country Service"
+        ]
+    }
 ];
 
 export default function ServiceGrid() {
@@ -29,10 +44,10 @@ export default function ServiceGrid() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {services.map((service, index) => (
+                    {CAPABILITIES.map((service, index) => (
                         <div
                             key={index}
-                            className="group bg-carbon border border-white/10 p-10 hover:border-stainless transition-colors duration-300 relative overflow-hidden"
+                            className="group bg-carbon border border-white/10 p-10 hover:border-signal/50 transition-all duration-300 relative overflow-hidden"
                         >
                             <service.icon className="w-12 h-12 text-stainless mb-8 stroke-1" />
                             <h3 className="text-2xl font-heading text-white uppercase mb-6 tracking-wide">
@@ -48,7 +63,7 @@ export default function ServiceGrid() {
                             </ul>
 
                             {/* Corner Accent */}
-                            <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-stainless/30 group-hover:border-white transition-colors" />
+                            <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-stainless/30 group-hover:border-signal/50 transition-colors" />
                         </div>
                     ))}
                 </div>
