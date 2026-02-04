@@ -20,17 +20,16 @@ export default function MobileRepairPage() {
     const specs = [
         { label: "Service Area", value: "Grande Prairie + 100km" },
         { label: "Processes", value: "AC/DC TIG / Stick / Mig" },
-        { label: "Power", value: "On-Board Generator" },
+
         { label: "Capabilities", value: "Aluminum / Carbon / Stainless" },
-        { label: "Rate", value: "$150/hr (Port-to-Port)" },
+        { label: "Rate", value: "$120/hr (Port-to-Port)" },
         { label: "Emergency", value: "24/7 Availability" },
     ];
 
     // 4. Material Expertise
     const materials = [
         { symbol: "Al", name: "Aluminum", number: "Boat Hulls / Tanks" },
-        { symbol: "Fe", name: "Cast Iron", number: "Engine Blocks" },
-        { symbol: "Cr", name: "Chromoly", number: "Roll Cages" },
+        // Cast Iron Removed
         { symbol: "St", name: "Structural", number: "Heavy Equipment" },
     ];
 
@@ -43,18 +42,20 @@ export default function MobileRepairPage() {
             specs={specs}
             materials={materials}
             leadTime="Same Day / On-Call"
+            ctaText="Request Dispatch"
         >
             {/* 2. Capabilities Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
                 <div>
                     <h3 className="text-xl font-heading text-white uppercase tracking-wider mb-4 border-l-2 border-yellow-500 pl-4">
-                        Heavy Equipment
+                        Custom Fab
                     </h3>
                     <ul className="space-y-2 text-stainless font-light">
-                        <li>• Bucket & Boom Crack Repair</li>
-                        <li>• Hardfacing & Wear Protection</li>
-                        <li>• Hydraulic Cylinder Mounts</li>
-                        <li>• Frame Reinforcement</li>
+                        <li>• Turbo systems</li>
+                        <li>• Full exhaust systems</li>
+                        <li>• Intercooler systems</li>
+                        <li>• Aluminum repair</li>
+                        <li>• Stainless repair</li>
                     </ul>
                 </div>
                 <div>
@@ -89,7 +90,7 @@ export default function MobileRepairPage() {
                         Mobile welding often gets a reputation for being "rough." We bring our shop standards to the field.
                     </p>
                     <p className="text-stainless text-base mt-4">
-                        Our mobile rig is equipped with high-frequency AC/DC TIG machines, meaning we can perform surgical aluminum repairs on a riverbank just as well as we can in the bay. No shortcuts, even when it's -30°C.
+                        Our mobile rig is equipped with high-frequency AC/DC TIG machines, meaning we can perform surgical aluminum repairs on a riverbank just as well as we can in the bay.
                     </p>
                 </div>
             </div>

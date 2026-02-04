@@ -32,7 +32,7 @@ export default function Hero() {
                 </div>
 
                 <div className="relative z-20 max-w-[1400px] mx-auto px-6 flex flex-col items-center text-center">
-                    <h1 className="text-5xl md:text-7xl lg:text-9xl font-heading font-bold text-white uppercase tracking-widest leading-none mb-6">
+                    <h1 className="text-3xl md:text-5xl lg:text-7xl font-heading font-normal text-stainless uppercase tracking-widest leading-none mb-6">
                         Fabrication
                         <br />
                         <span className="text-stainless text-3xl md:text-5xl lg:text-7xl block mt-2 tracking-[0.2em] font-normal">
@@ -64,11 +64,11 @@ export default function Hero() {
                 {/* Trust Signals - Machined Seam Look */}
                 <div className="absolute bottom-0 left-0 w-full z-20 border-t border-white/5 py-3 md:py-4 bg-carbon/90 backdrop-blur-sm">
                     <div className="max-w-[1400px] mx-auto px-6 flex flex-wrap md:flex-nowrap justify-center md:justify-between items-center gap-x-6 gap-y-3 opacity-70 overflow-hidden">
-                        <span className="text-xs md:text-sm uppercase tracking-widest font-heading font-bold text-center">BorgWarner</span>
+                        <span className="text-xs md:text-sm uppercase tracking-widest font-heading font-bold text-center">True North Turbos</span>
                         <span className="text-xs md:text-sm uppercase tracking-widest font-heading font-bold text-center">Vibrant Performance</span>
                         <span className="text-xs md:text-sm uppercase tracking-widest font-heading font-bold text-center">Everlast Welders</span>
-                        <span className="text-xs md:text-sm uppercase tracking-widest font-heading font-bold text-center">Nelson Racing Turbos</span>
-                        <span className="text-xs md:text-sm uppercase tracking-widest font-heading font-bold text-center">Garrett</span>
+                        <span className="text-xs md:text-sm uppercase tracking-widest font-heading font-bold text-center">Radium</span>
+                        <span className="text-xs md:text-sm uppercase tracking-widest font-heading font-bold text-center">Cole Stainless Solutions</span>
                     </div>
                 </div>
             </section>

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function FabricationPage() {
     // 1. The Process Timeline
     const timeline = [
-        { title: "Consultation & Scan", description: "Measurement / 3D Scanning to define packaging constraints." },
+        { title: "Consultation & Mockup", description: "Measurement / Physical Mockup to define packaging constraints." },
         { title: "CAD & Material Selection", description: "Design validation. Choosing Schedule 10/40 vs. Thin Wall." },
         { title: "Precision TIG Welding", description: "Strict back-purging protocols. Sanitary welds. Void-free penetration." },
         { title: "Finish & QC", description: "Pressure testing, surfacing flanges, and Cerakote options." },
@@ -31,7 +31,6 @@ export default function FabricationPage() {
         { symbol: "SS", name: "304/321 Stainless", number: "Exhaust Systems" },
         { symbol: "Al", name: "6061 Aluminum", number: "Intake & Cooling" },
         { symbol: "Ti", name: "Titanium", number: "Exotic Exhausts" },
-        { symbol: "St", name: "Structural", number: "Reinforcement" },
     ];
 
     return (
@@ -77,8 +76,8 @@ export default function FabricationPage() {
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-white font-mono">
                         <div className="bg-carbon border border-white/10 p-3">Aluminum Boat Hulls</div>
-                        <div className="bg-carbon border border-white/10 p-3">Cast Iron Restoration</div>
-                        <div className="bg-carbon border border-white/10 p-3">Structural Steel / Chromoly</div>
+                        <div className="bg-carbon border border-white/10 p-3">Steel Restoration</div>
+
                     </div>
                 </div>
             </div>
@@ -91,7 +90,7 @@ export default function FabricationPage() {
                         <strong className="text-white font-bold">Oxidation is the enemy.</strong> At DudeRacing, all stainless steel exhaust components are back-purged with argon. This prevents &quot;sugaring&quot; (internal crystallization) inside the pipe, ensuring laminar flow and preventing structural cracking under thermal cycling.
                     </p>
                     <p className="text-stainless text-base mt-4">
-                        Many shops skip this step to save gas and time. We don&apos;t. A weld that looks good on the outside but is crystallized on the inside creates turbulence and weak points. Whether it&apos;s a 700hp manifold or a simple exhaust repair, the atmosphere is purged before the arc is struck.
+                        Many shops skip this step to save gas and time. We don&apos;t. A weld that looks good on the outside but is crystallized on the inside creates turbulence and weak points. Whether it&apos;s a 1500+ hp twin turbo build or a simple exhaust repair, the atmosphere is purged before the arc is struck.
                     </p>
                 </div>
             </div>

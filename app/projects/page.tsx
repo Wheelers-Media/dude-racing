@@ -118,10 +118,10 @@ export default function ProjectsPage() {
                                         Winterized F-350
                                     </h3>
                                     <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-4">
-                                        Diesel Heater / Slip Tank Integration
+                                        Auxiliary Heater / Slip Tank Integration
                                     </p>
                                     <p className="text-stainless/80 text-sm mb-6 line-clamp-3">
-                                        We integrated a diesel-fired engine and coolant heater directly into a custom DudeRacing slip tank fuel supply for -40°C starts.
+                                        We integrated a high-output engine and coolant heater directly into a custom DudeRacing slip tank fuel supply for -40°C starts.
                                     </p>
                                     <button className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white border-b border-white/30 pb-1 group-hover:border-white transition-colors">
                                         View Case Study <ArrowRight className="w-3 h-3" />

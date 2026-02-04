@@ -4,8 +4,7 @@ import { CheckCircle2 } from "lucide-react";
 
 const features = [
     "Aluminum & Stainless TIG on-site",
-    "Heavy Equipment Boom Repair",
-    "Mobile Hoist & Rigging Service"
+    "Mobile Hoist & Fabrication Services"
 ];
 
 export default function MobileFeature() {
@@ -22,7 +21,7 @@ export default function MobileFeature() {
                     </h2>
                     <p className="text-stainless text-lg mb-10 max-w-xl font-light leading-relaxed">
                         Don't haul broken equipment. Our mobile unit is equipped with on-board power,
-                        AC/DC TIG capabilities, and a 5,000lb crane for on-site heavy repair.
+                        AC/DC TIG capabilities, and a 5,000lb mobile hoist for on-site fabrication.
                     </p>
 
                     <ul className="space-y-4 mb-12">

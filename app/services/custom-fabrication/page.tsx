@@ -20,7 +20,6 @@ export default function CustomFabricationPage() {
     const materials = [
         { symbol: "Ti", name: "Titanium", number: "22" },
         { symbol: "Al", name: "Aluminum", number: "13" },
-        { symbol: "Cr", name: "Chromoly", number: "24" },
         { symbol: "321", name: "321 Stainless", number: "SS" },
     ];
 

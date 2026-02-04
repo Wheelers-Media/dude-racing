@@ -36,6 +36,7 @@ interface ServicePageLayoutProps {
     specsTitle?: string;
     materialsTitle?: string;
     overlayClassName?: string;
+    ctaText?: string;
 }
 
 export default function ServicePageLayout({
@@ -52,6 +53,7 @@ export default function ServicePageLayout({
     specsTitle = "Technical Specifications",
     materialsTitle = "Material Expertise",
     overlayClassName = "bg-black/50",
+    ctaText = "Book Consultation",
 }: ServicePageLayoutProps) {
     const [modalOpen, setModalOpen] = useState(false);
 
@@ -172,13 +174,11 @@ export default function ServicePageLayout({
                                 onClick={() => setModalOpen(true)}
                                 className="w-full bg-white text-black font-heading font-bold uppercase py-4 tracking-widest hover:bg-stainless transition-colors rounded-none mb-4 flex items-center justify-center gap-2"
                             >
-                                Book Consultation
+                                {ctaText}
                                 <ArrowRight className="w-4 h-4" />
                             </button>
 
-                            <a href="#" className="block text-center text-xs uppercase tracking-widest text-stainless/50 hover:text-white transition-colors">
-                                View Pricing FAQ
-                            </a>
+
 
                         </div>
                     </div>

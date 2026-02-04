@@ -20,7 +20,7 @@ export default function TransportPage() {
     // 2. The Stats Grid (Adapted for Logistics)
     const specs = [
         { label: "Insurance", value: "Fully Insured Cargo" },
-        { label: "Trailer Length", value: "26ft Enclosed" },
+        { label: "Trailer Length", value: "28ft Enclosed" },
         { label: "Climate", value: "Fully Heated" },
         { label: "Region", value: "AB / BC / SK" },
         { label: "Tie-Downs", value: "Full E-Track System" },
@@ -82,8 +82,8 @@ export default function TransportPage() {
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-white font-mono">
                         <div className="bg-carbon border border-white/10 p-3">Winch Loading Assistance Available</div>
-                        <div className="bg-carbon border border-white/10 p-3">Snatch Blocks / Soft Shackles</div>
-                        <div className="bg-carbon border border-white/10 p-3">Rolling Chassis Support</div>
+                        <div className="bg-carbon border border-white/10 p-3">Soft End Slings / Soft Shackles</div>
+                        <div className="bg-carbon border border-white/10 p-3">Rolling Chassis Loading Capability</div>
                     </div>
                 </div>
             </div>

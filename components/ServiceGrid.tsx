@@ -15,10 +15,10 @@ const CAPABILITIES = [
         title: "SPECIALIZED WELDING",
         icon: Wrench,
         items: [
-            "Aluminum Hull & Cast Restoration",
+            "Aluminum Hull Repair",
             "Exotic Alloys (Titanium, Nickel)",
-            "Cast Iron Block Repair",
-            "Magnesium Valve Covers"
+            "Stainless Steel Repair & Upgrades",
+            "Steel Restoration"
         ]
     },
     {

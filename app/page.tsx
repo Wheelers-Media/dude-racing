@@ -23,6 +23,7 @@ export default async function Home() {
   } catch (error) {
     console.error("Error reading LandingPage images:", error);
   }
+
   return (
     <main className="min-h-screen bg-page-bg text-white selection:bg-white selection:text-black">
       <Header />
