@@ -4,7 +4,7 @@ export default function CustomFabricationPage() {
     const timeline = [
         { title: "Consultation & 3D Scanning", description: "We define project goals and use Creaform 3D scanning to digitize your vehicle's engine bay or chassis." },
         { title: "CAD Design & Flow Simulation", description: "Components are modeled in SolidWorks. Flow analysis ensures optimal performance before a single cut is made." },
-        { title: "Precision Fabrication", description: "TIG welding with 304SS or Inconel, back-purged for sanitary welds. CNC flange surfacing." },
+        { title: "Precision Fabrication", description: "TIG welding with 304SS or Titanium, back-purged for sanitary welds. CNC flange surfacing." },
         { title: "Quality Control", description: "Pressure testing, fitment verification, and ultrasonic weld inspection if required." },
     ];
 
@@ -21,7 +21,7 @@ export default function CustomFabricationPage() {
         { symbol: "Ti", name: "Titanium", number: "22" },
         { symbol: "Al", name: "Aluminum", number: "13" },
         { symbol: "Cr", name: "Chromoly", number: "24" },
-        { symbol: "Ni", name: "Inconel", number: "28" },
+        { symbol: "321", name: "321 Stainless", number: "SS" },
     ];
 
     return (

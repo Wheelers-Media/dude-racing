@@ -211,7 +211,7 @@ export default function ProjectsPage() {
                                 {[
                                     { year: "2025", project: "Nissan S13", scope: "Roll Cage & Tubed Front", notes: "Formula Drift Spec" },
                                     { year: "2025", project: "Toyota Supra MK4", scope: "Turbo Manifold", notes: "1000hp Support" },
-                                    { year: "2024", project: "Dodge Viper", scope: "Custom Exhaust", notes: "Inconel System" },
+                                    { year: "2024", project: "Dodge Viper", scope: "Custom Exhaust", notes: "Titanium System" },
                                     { year: "2024", project: "BMW E46 M3", scope: "Subframe Reinforce", notes: "Track Prep" },
                                     { year: "2023", project: "Audi R8", scope: "Twin Turbo Kit", notes: "Fabrication Only" },
                                 ].map((row, idx) => (

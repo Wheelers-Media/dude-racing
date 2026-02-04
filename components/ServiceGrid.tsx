@@ -16,7 +16,7 @@ const CAPABILITIES = [
         icon: Wrench,
         items: [
             "Aluminum Hull & Cast Restoration",
-            "Exotic Alloys (Inconel, Titanium)",
+            "Exotic Alloys (Titanium, Nickel)",
             "Cast Iron Block Repair",
             "Magnesium Valve Covers"
         ]
