@@ -48,13 +48,13 @@ export default function Hero() {
                     <div className="flex flex-col md:flex-row gap-6 w-full max-w-xl justify-center">
                         <button
                             onClick={() => openModal("build")}
-                            className="flex-1 bg-white text-black font-heading font-bold uppercase py-5 md:h-14 tracking-widest hover:bg-signal hover:text-black hover:border-signal transition-colors rounded-none border border-transparent"
+                            className="flex-1 flex items-center justify-center bg-white text-black font-heading font-bold uppercase py-5 md:h-14 tracking-widest hover:bg-signal hover:text-black hover:border-signal transition-colors rounded-none border border-transparent"
                         >
                             Custom Fabrication
                         </button>
                         <button
                             onClick={() => openModal("service")}
-                            className="flex-1 bg-transparent border border-stainless text-stainless font-heading font-bold uppercase py-5 md:h-14 tracking-widest hover:border-arc hover:text-arc transition-colors rounded-none"
+                            className="flex-1 flex items-center justify-center bg-transparent border border-stainless text-stainless font-heading font-bold uppercase py-5 md:h-14 tracking-widest hover:border-arc hover:text-arc transition-colors rounded-none"
                         >
                             Repair & Mobile Welding
                         </button>
