@@ -19,6 +19,7 @@ export default function Header() {
         { label: "Fabrication", href: "/services/fabrication" },
         { label: "Exhausts", href: "/services/exhausts" },
         { label: "Transport", href: "/services/transport" },
+        { label: "Mobile Repair & Hoist", href: "/services/mobile-repair" },
     ];
 
     return (
