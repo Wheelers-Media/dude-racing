@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
-// import { Resend } from 'resend'; 
+import { Resend } from 'resend';
 
-// const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
     try {
@@ -18,40 +18,43 @@ export async function POST(request: Request) {
         console.log("Data:", data);
         console.log("------------------------------------------");
 
-        // --- RESEND INTEGRATION START ---
-        // Uncomment below once you have installed 'resend' and added RESEND_API_KEY to .env.local
+        const { name, email, phone, details, budget, urgency, vehicle, serviceType } = data;
 
-        /*
-        const { name, email, phone, details, budget, urgency, vehicle } = data;
-        
-        const subject = `[NEW LEAD] - ${type === 'service' ? 'Service Inquiry' : 'Custom Build'} - ${name}`;
-        
+        const subject = type === 'service'
+            ? `New Service Inquiry: ${name} - ${serviceType}`
+            : `New Custom Build Request: ${name}`;
+
         // Construct Email Body
-        let htmlBody = `<h1>New Lead: ${type}</h1>`;
-        
+        let htmlBody = `<h1>New Lead: ${type === 'service' ? 'Service Inquiry' : 'Custom Build'}</h1>`;
+
         if (type === 'service') {
             htmlBody += `
-                <p><strong>Name:</strong> ${name}</p>
-                <p><strong>Phone:</strong> ${phone}</p>
-                <p><strong>Email:</strong> ${email}</p>
-                <p><strong>Service Type:</strong> ${data.serviceType}</p>
-                <p><strong>Urgency:</strong> ${urgency}</p>
+                <ul>
+                    <li><strong>Name:</strong> ${name}</li>
+                    <li><strong>Phone:</strong> ${phone}</li>
+                    <li><strong>Email:</strong> ${email}</li>
+                    <li><strong>Service Type:</strong> ${serviceType}</li>
+                    <li><strong>Urgency:</strong> ${urgency}</li>
+                </ul>
             `;
         } else {
-             htmlBody += `
-                <p><strong>Name:</strong> ${name}</p>
-                <p><strong>Phone:</strong> ${phone || 'N/A'}</p>
-                <p><strong>Email:</strong> ${email}</p>
-                <p><strong>Budget:</strong> ${budget}</p>
-                <p><strong>Vehicle:</strong> ${vehicle?.year} ${vehicle?.make} ${vehicle?.model}</p>
-                <p><strong>Goal:</strong> ${data.goal}</p>
-                <p><strong>Vision:</strong> ${details}</p>
+            htmlBody += `
+                <ul>
+                    <li><strong>Name:</strong> ${name}</li>
+                    <li><strong>Phone:</strong> ${phone || 'N/A'}</li>
+                    <li><strong>Email:</strong> ${email}</li>
+                    <li><strong>Budget:</strong> ${budget}</li>
+                    <li><strong>Vehicle:</strong> ${vehicle?.year} ${vehicle?.make} ${vehicle?.model}</li>
+                    <li><strong>Goal:</strong> ${data.goal}</li>
+                    <li><strong>Vision:</strong> ${details}</li>
+                </ul>
             `;
         }
 
         const { data: emailData, error } = await resend.emails.send({
-            from: 'DudeRacing <onboarding@resend.dev>', // Update this to your domain
-            to: ['bob@duderacing.com'], // Update to Bob's real email
+            from: 'Dude Racing Website <onboarding@resend.dev>',
+            to: ['nathan@wheelersmedia.ca'], // Changed to account owner for testing
+            replyTo: email,
             subject: subject,
             html: htmlBody,
         });
@@ -60,13 +63,8 @@ export async function POST(request: Request) {
             console.error("Resend Error:", error);
             return NextResponse.json({ error }, { status: 500 });
         }
-        */
-        // --- RESEND INTEGRATION END ---
 
-        // Simulate Network Delay
-        await new Promise(resolve => setTimeout(resolve, 1500));
-
-        return NextResponse.json({ success: true, message: "Inquiry Sent Successfully" });
+        return NextResponse.json({ success: true, message: "Inquiry Sent Successfully", id: emailData?.id });
 
     } catch (error) {
         console.error("API Error:", error);

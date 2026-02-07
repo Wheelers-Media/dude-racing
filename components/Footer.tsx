@@ -10,7 +10,7 @@ export default function Footer() {
     return (
         <footer className="bg-carbon pt-24 pb-12 border-t border-white/10">
             <div className="max-w-[1400px] mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-24 transition-all">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-24 transition-all">
 
                     {/* Brand */}
                     <div className="space-y-6">
@@ -30,13 +30,12 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* Quick Links */}
+                    {/* Navigation */}
                     <div>
                         <h4 className="text-xs font-bold text-white uppercase tracking-widest mb-8">Navigation</h4>
                         <ul className="space-y-4">
                             {[
                                 { name: "Projects", href: "/projects" },
-                                { name: "Services", href: "/services" },
                                 { name: "The Shop", href: "/the-shop" },
                                 { name: "Supply", href: "/shop" },
                             ].map((item) => (
@@ -47,18 +46,32 @@ export default function Footer() {
                                 </li>
                             ))}
                             <li>
-                                <Link href="/services/mobile-repair" className="text-stainless hover:text-white text-sm uppercase tracking-wider transition-colors">
-                                    Mobile Welding Available
-                                </Link>
-                            </li>
-                            <li>
                                 <button
                                     onClick={() => openModal('service')}
-                                    className="text-stainless hover:text-white text-sm uppercase tracking-wider transition-colors"
+                                    className="text-stainless hover:text-white text-sm uppercase tracking-wider transition-colors text-left"
                                 >
                                     Contact
                                 </button>
                             </li>
+                        </ul>
+                    </div>
+
+                    {/* Services */}
+                    <div>
+                        <h4 className="text-xs font-bold text-white uppercase tracking-widest mb-8">Services</h4>
+                        <ul className="space-y-4">
+                            {[
+                                { name: "Mobile Repair", href: "/services/mobile-repair" },
+                                { name: "Custom Fabrication", href: "/services/fabrication" },
+                                { name: "Exhaust Systems", href: "/services/exhausts" },
+                                { name: "Transport", href: "/services/transport" },
+                            ].map((item) => (
+                                <li key={item.name}>
+                                    <Link href={item.href} className="text-stainless hover:text-white text-sm uppercase tracking-wider transition-colors">
+                                        {item.name}
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
@@ -74,8 +87,8 @@ export default function Footer() {
                 </div>
 
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-stainless/40 uppercase tracking-widest">
-                    <p>© 2026 DudeRacing Identity System.</p>
-                    <p>Engineered for Speed.</p>
+                    <p>© 2026 DudeRacing. All Rights Reserved.</p>
+                    <p>ENGINEERED FOR SPEED</p>
                 </div>
             </div>
         </footer>

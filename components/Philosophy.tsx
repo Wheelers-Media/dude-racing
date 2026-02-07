@@ -31,7 +31,7 @@ export default function Philosophy() {
 
                     <div className="relative h-[600px] w-full bg-carbon border border-white/5 p-2">
                         {/* Visual: Use a "Dime Stack" macro weld image placeholder */}
-                        <div className="w-full h-full relative bg-neutral-800 overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
+                        <div className="w-full h-full relative bg-neutral-800 overflow-hidden md:grayscale md:hover:grayscale-0 transition-all duration-700">
                             {/* Placeholder for weld image */}
                             <div className="absolute inset-0 bg-[url('/tig-welding.jpg')] bg-cover bg-center opacity-60"></div>
                             <div className="absolute bottom-8 left-8 bg-black/80 backdrop-blur px-6 py-3 border-l-2 border-white">

@@ -10,7 +10,7 @@ const SERVICES = [
     {
         title: "PERFORMANCE EXHAUSTS",
         desc: "Custom stainless systems, headers, and valve integration.",
-        image: "/exhaust.jpg",
+        image: "/exhaust-systems.jpg",
         link: "/services/exhausts"
     },
     {
@@ -38,7 +38,7 @@ export default function ServiceGrid() {
                             <img
                                 src={service.image}
                                 alt={service.title}
-                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 md:grayscale md:group-hover:grayscale-0"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent" />
 

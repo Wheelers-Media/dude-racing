@@ -30,7 +30,7 @@ export default function K24S2000Page() {
                         The client approached us with a clear but difficult goal: <strong>700 wheel horsepower</strong> in a street-driven Honda S2000, while retaining full air conditioning and power steering. In the tight confines of the S2000 engine bay, space is the enemy.
                     </p>
                     <p>
-                        Standard off-the-shelf turbo kits required sacrificing the A/C compressor or relocating the battery to the trunk—compromises the client wasn&apos;t willing to make. We needed a clean-sheet design.
+                        Standard off-the-shelf turbo kits required sacrificing the A/C compressor or relocating the battery to the trunk - compromises the client wasn&apos;t willing to make. We needed a clean-sheet design.
                     </p>
                 </div>
             </section>
@@ -44,16 +44,16 @@ export default function K24S2000Page() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 h-[600px]">
                     <div className="bg-carbon border border-white/10 h-full relative group overflow-hidden">
                         {/* Placeholder Image */}
-                        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-500" />
+                        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center md:grayscale md:group-hover:grayscale-0 transition-all duration-500" />
                         <div className="absolute bottom-4 left-4 bg-black/80 px-3 py-1 text-xs font-mono text-white">Mockup Phase</div>
                     </div>
                     <div className="flex flex-col gap-4 h-full">
                         <div className="flex-1 bg-carbon border border-white/10 relative group overflow-hidden">
-                            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-500" />
+                            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center md:grayscale md:group-hover:grayscale-0 transition-all duration-500" />
                             <div className="absolute bottom-4 left-4 bg-black/80 px-3 py-1 text-xs font-mono text-white">Back-Purged TIG</div>
                         </div>
                         <div className="flex-1 bg-carbon border border-white/10 relative group overflow-hidden">
-                            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1535136829763-eb5e638d01eb?q=80&w=2056&auto=format&fit=crop')] bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-500" />
+                            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1535136829763-eb5e638d01eb?q=80&w=2056&auto=format&fit=crop')] bg-cover bg-center md:grayscale md:group-hover:grayscale-0 transition-all duration-500" />
                             <div className="absolute bottom-4 left-4 bg-black/80 px-3 py-1 text-xs font-mono text-white">3.5&quot; Downpipe</div>
                         </div>
                     </div>
@@ -84,10 +84,10 @@ export default function K24S2000Page() {
             <section>
                 <div className="grid grid-cols-2 gap-4">
                     <div className="relative w-full aspect-square">
-                        <Image src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45f7?q=80&w=1936&auto=format&fit=crop" alt="Gallery 1" fill className="object-cover grayscale hover:grayscale-0 transition-all" unoptimized />
+                        <Image src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45f7?q=80&w=1936&auto=format&fit=crop" alt="Gallery 1" fill className="object-cover md:grayscale md:hover:grayscale-0 transition-all" unoptimized />
                     </div>
                     <div className="relative w-full aspect-square">
-                        <Image src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=2070&auto=format&fit=crop" alt="Gallery 2" fill className="object-cover grayscale hover:grayscale-0 transition-all" unoptimized />
+                        <Image src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=2070&auto=format&fit=crop" alt="Gallery 2" fill className="object-cover md:grayscale md:hover:grayscale-0 transition-all" unoptimized />
                     </div>
                 </div>
             </section>

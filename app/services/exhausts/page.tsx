@@ -39,7 +39,7 @@ export default function ExhaustsPage() {
             subtitle="TIG WELDED / BACK-PURGED / 304 STAINLESS"
             heroImage="/exhaust-systems.jpg"
             overlayClassName="bg-black/70"
-            heroImagePosition="center 25%"
+            heroImagePosition="center 50%"
             timelineSteps={timeline}
             specs={specs}
             materials={materials}
@@ -73,7 +73,7 @@ export default function ExhaustsPage() {
                         Custom Configuration
                     </h3>
                     <p className="text-stainless mb-4 text-sm max-w-2xl">
-                        Every system is built to the vehicle&apos;s specific needs—whether it&apos;s a daily driver requiring a valved stealth mode or a dedicated track car needing maximum flow.
+                        Every system is built to the vehicle&apos;s specific needs - whether it&apos;s a daily driver requiring a valved stealth mode or a dedicated track car needing maximum flow.
                     </p>
                 </div>
             </div>

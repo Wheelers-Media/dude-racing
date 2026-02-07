@@ -46,7 +46,7 @@ export default function TheShopPage() {
                                 <strong className="text-white font-bold">DudeRacing wasn&apos;t founded by a businessman; it was founded by a passion.</strong>
                             </p>
                             <p>
-                                With a background in competitive motorsports, Bob Dudenhoeffer understands that a weld isn&apos;t just structural—it&apos;s safety. We build cars that perform on the track, not just the trailer.
+                                With a background in competitive motorsports, Bob Dudenhoeffer understands that a weld isn&apos;t just structural - it&apos;s safety. We build cars that perform on the track, not just the trailer.
                             </p>
                             <p>
                                 Every chassis we jig, every engine we blueprint, and every cage we weld is executed with the understanding that it will be pushed to the limit. We don&apos;t just fabricate; we engineer for speed.
@@ -56,7 +56,7 @@ export default function TheShopPage() {
                     <div className="order-1 lg:order-2 relative h-[600px] border border-white/10 group">
                         <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10" />
                         <div
-                            className="w-full h-full bg-cover bg-center grayscale contrast-110 hover:grayscale-0 transition-all duration-700"
+                            className="w-full h-full bg-cover bg-center contrast-110 transition-all duration-700"
                             style={{ backgroundImage: `url('/headshot.jpg')` }}
                         />
                         <div className="absolute bottom-4 right-4 z-20 bg-black/80 backdrop-blur px-4 py-2 border border-white/10">
@@ -124,7 +124,7 @@ export default function TheShopPage() {
                         ].map((src, idx) => (
                             <div key={idx} className="relative aspect-square bg-carbon overflow-hidden group">
                                 <div
-                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110 md:grayscale md:group-hover:grayscale-0"
                                     style={{ backgroundImage: `url('${src}')` }}
                                 />
                                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />

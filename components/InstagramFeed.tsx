@@ -59,7 +59,7 @@ export default function InstagramFeed() {
                 {FALLBACK_POSTS.map((src, idx) => (
                     <div key={idx} className="relative aspect-square bg-carbon overflow-hidden group">
                         <div
-                            className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                            className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110 md:grayscale md:group-hover:grayscale-0"
                             style={{ backgroundImage: `url('${src}')` }}
                         />
                         <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
@@ -88,12 +88,12 @@ export default function InstagramFeed() {
                     >
                         {post.media_type === 'VIDEO' ? (
                             <div
-                                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110 md:grayscale md:group-hover:grayscale-0"
                                 style={{ backgroundImage: `url('${post.thumbnail_url || post.media_url}')` }}
                             />
                         ) : (
                             <div
-                                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110 md:grayscale md:group-hover:grayscale-0"
                                 style={{ backgroundImage: `url('${post.media_url}')` }}
                             />
                         )}

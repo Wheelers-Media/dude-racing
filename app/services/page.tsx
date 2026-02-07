@@ -20,7 +20,7 @@ export default function ServicesPage() {
                     {/* Abstract Shop Background */}
                     <div
                         className="w-full h-full bg-cover bg-center opacity-40 mix-blend-overlay"
-                        style={{ backgroundImage: `url('https://images.unsplash.com/photo-1565043666747-69f6646db940?q=80&w=2574&auto=format&fit=crop')` }}
+                        style={{ backgroundImage: `url('/DSC08206.jpg')` }}
                     />
                 </div>
 

@@ -27,7 +27,7 @@ export default function Header() {
             <div className="max-w-[1400px] mx-auto px-6 h-20 flex items-center justify-between relative z-50">
                 {/* Logo */}
                 <Link href="/" className="flex items-center">
-                    <Image src="/dude-racing-logo-white.png" alt="DudeRacing" width={200} height={32} className="h-8 md:h-5 w-auto" />
+                    <Image src="/dude-racing-logo-white.png" alt="DudeRacing" width={200} height={32} className="h-6 md:h-5 w-auto" />
                 </Link>
 
                 {/* Desktop Nav */}
@@ -121,8 +121,8 @@ export default function Header() {
                         >
                             Get A Quote
                         </button>
-                        <a href="tel:+15875550123" className="text-stainless hover:text-white font-mono text-sm tracking-wider">
-                            (587) 555-0123
+                        <a href="tel:5872982222" className="text-stainless hover:text-white font-mono text-sm tracking-wider">
+                            (587) 298-2222
                         </a>
                     </div>
                 </nav>
