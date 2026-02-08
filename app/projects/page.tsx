@@ -132,65 +132,7 @@ export default function ProjectsPage() {
                     </div>
                 </section>
 
-                {/* 3. Section B: "On The Lift" (WIP) - Authentic Data */}
-                <section>
-                    <div className="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
-                        <h2 className="text-sm font-mono text-stainless uppercase tracking-widest border-l-2 border-yellow-500 pl-4">
-                            On The Lift // Live Status
-                        </h2>
-                        <span className="flex items-center gap-2 text-xs text-green-400 uppercase tracking-widest animate-pulse">
-                            <div className="w-2 h-2 bg-green-400 rounded-full" /> Shop Active
-                        </span>
-                    </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                        {[
-                            {
-                                img: "https://images.unsplash.com/photo-1619623724330-8d4cb23f37b1?q=80&w=2670&auto=format&fit=crop", // Placeholder
-                                project: "Sport Bike",
-                                task: "Header Mod",
-                                status: "Port Matching",
-                                color: "bg-orange-500" // Moved from Sig to WIP
-                            },
-                            {
-                                img: "https://images.unsplash.com/photo-1552176625-e47ff529b595?q=80&w=2669&auto=format&fit=crop", // Placeholder
-                                project: "Aluminum Boat",
-                                task: "Hull Repair",
-                                status: "Welding",
-                                color: "bg-blue-500"
-                            },
-                            {
-                                img: "https://images.unsplash.com/photo-1608611100220-41315513d804?q=80&w=2670&auto=format&fit=crop", // Placeholder
-                                project: "Custom",
-                                task: "Parts Tray",
-                                status: "Finished",
-                                color: "bg-green-500"
-                            },
-                            {
-                                img: "https://images.unsplash.com/photo-1616788494707-ec7637d77059?q=80&w=2487&auto=format&fit=crop", // Placeholder
-                                project: "R32 GTR",
-                                task: "Manifold Fab",
-                                status: "Fabrication",
-                                color: "bg-yellow-500"
-                            },
-                        ].map((item, idx) => (
-                            <div key={idx} className="bg-carbon border border-white/10 p-4 hover:border-white/30 transition-colors">
-                                <div className="aspect-square bg-neutral-800 mb-4 overflow-hidden md:grayscale md:hover:grayscale-0 transition-all duration-500">
-                                    <div
-                                        className="w-full h-full bg-cover bg-center"
-                                        style={{ backgroundImage: `url('${item.img}')` }}
-                                    />
-                                </div>
-                                <div className="flex items-center gap-2 mb-2">
-                                    <div className={`w-1.5 h-1.5 rounded-full ${item.color}`} />
-                                    <span className="text-[10px] uppercase tracking-widest text-stainless">{item.status}</span>
-                                </div>
-                                <h4 className="text-lg font-heading text-white uppercase tracking-wide leading-none mb-1">{item.project}</h4>
-                                <p className="text-xs text-stainless/50 font-mono uppercase">{item.task}</p>
-                            </div>
-                        ))}
-                    </div>
-                </section>
 
                 {/* 4. The "Archives" - Responsive Hybrid Layout */}
                 <section className="mt-24">
