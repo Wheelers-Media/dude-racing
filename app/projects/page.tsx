@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ArrowRight, Wrench, Clock, AlertCircle } from "lucide-react";
 import Link from "next/link";
+import ScrollImage from "@/components/ui/ScrollImage";
 
 export default function ProjectsPage() {
     return (
@@ -35,11 +36,12 @@ export default function ProjectsPage() {
                         {/* Build 1: Twin-Turbo LS 370Z (The Hero) */}
                         <div className="group relative border border-white/10 overflow-hidden bg-carbon grid grid-cols-1 lg:grid-cols-2">
                             <div className="relative h-[400px] lg:h-auto overflow-hidden">
-                                <div
-                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                                    style={{ backgroundImage: `url('/LS-370Z.jpg')` }} // LS 370Z
+                                <ScrollImage
+                                    src="/LS-370Z.jpg"
+                                    alt="Twin-Turbo LS 370Z"
+                                    fill
+                                    className="object-cover"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
                             </div>
 
                             <div className="p-8 lg:p-12 flex flex-col justify-center">
@@ -69,11 +71,14 @@ export default function ProjectsPage() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {/* Build 2: K-Swapped S2000 */}
                             <div className="group relative h-[500px] border border-white/10 overflow-hidden bg-carbon flex flex-col justify-end">
-                                <div
-                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                                    style={{ backgroundImage: `url('/s2000.jpg')` }} // K-Swapped S2000
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90 group-hover:opacity-80 transition-opacity" />
+                                <div className="absolute inset-0 z-0">
+                                    <ScrollImage
+                                        src="/s2000.jpg"
+                                        alt="K-Swapped S2000"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
 
                                 <div className="relative z-20 p-8">
                                     <div className="flex gap-2 mb-3 flex-wrap">
@@ -100,11 +105,14 @@ export default function ProjectsPage() {
 
                             {/* Build 3: Hayabusa Smart Car */}
                             <div className="group relative h-[500px] border border-white/10 overflow-hidden bg-carbon flex flex-col justify-end">
-                                <div
-                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                                    style={{ backgroundImage: `url('/projects/smart-main.jpg')` }} // Hayabusa Smart Car
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90 group-hover:opacity-80 transition-opacity" />
+                                <div className="absolute inset-0 z-0">
+                                    <ScrollImage
+                                        src="/projects/smart-main.jpg"
+                                        alt="Hayabusa Smart Car"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
 
                                 <div className="relative z-20 p-8">
                                     <div className="flex gap-2 mb-3 flex-wrap">

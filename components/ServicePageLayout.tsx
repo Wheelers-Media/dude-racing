@@ -5,6 +5,7 @@ import InquiryModal from "./InquiryModal";
 import Header from "./Header";
 import Footer from "./Footer";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import ScrollImage from "./ui/ScrollImage";
 
 interface TimelineStep {
     title: string;
@@ -66,11 +67,13 @@ export default function ServicePageLayout({
                 <div className="absolute inset-0 bg-neutral-900 z-0">
                     <div className={`absolute inset-0 ${overlayClassName} z-10`} />
                     {/* Image Texture */}
-                    <div
-                        className="w-full h-full bg-cover opacity-60 mix-blend-overlay grayscale contrast-125"
+                    <ScrollImage
+                        src={heroImage}
+                        alt={title}
+                        fill
+                        className="opacity-60 mix-blend-overlay contrast-125 object-cover"
                         style={{
-                            backgroundImage: `url('${heroImage}')`,
-                            backgroundPosition: heroImagePosition
+                            objectPosition: heroImagePosition
                         }}
                     />
                 </div>
