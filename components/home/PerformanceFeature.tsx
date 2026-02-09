@@ -43,7 +43,7 @@ export default function PerformanceFeature() {
                 </div>
 
                 {/* Column 2: Visual */}
-                <div className="flex-1 relative min-h-[400px] md:min-h-auto group border-l border-white/10">
+                <div className="flex-1 relative h-[400px] md:h-auto group border-l border-white/10">
                     <ScrollImage
                         src="/LandingPage/550358950_1233636105469327_3989912168816956869_n.jpg"
                         alt="Twin-Turbo LS Fabrication"
