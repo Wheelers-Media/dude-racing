@@ -4,43 +4,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Package, Mail } from "lucide-react";
 import { useInquiryModal } from "@/context/InquiryModalContext";
+import { products } from "@/lib/products";
 
 export default function ShopPage() {
     const { openModal } = useInquiryModal();
-    const products = [
-        {
-            id: 1,
-            name: "Leather Patch Snapback",
-            variant: "Black / Brown",
-            price: "$35.00 CAD",
-            image: "/Supply/leatherpatchsnapback.jpg",
-            badge: "Limited Stock"
-        },
-        {
-            id: 2,
-            name: "Shop Logo Tee",
-            variant: "Red / Blue / Black",
-            price: "$45.00 CAD",
-            image: "/Supply/shoplogotee.jpg",
-            badge: "In Stock"
-        },
-        {
-            id: 3,
-            name: "Decal Pack",
-            variant: "Mixed",
-            price: "$15.00 CAD",
-            image: "/Supply/stickers.jpg",
-            badge: "Low Qty"
-        },
-        {
-            id: 4,
-            name: "BILLET KEYCHAIN OPENER",
-            variant: "Black anodized aluminum bottle opener with laser engraving.",
-            price: "$12.00 CAD",
-            image: "/Supply/keychains.jpg",
-            badge: "In Stock"
-        }
-    ];
 
     return (
         <div className="min-h-screen bg-page-bg text-white selection:bg-white selection:text-black">

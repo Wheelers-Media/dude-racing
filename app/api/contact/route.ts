@@ -26,7 +26,7 @@ export async function POST(request: Request) {
         console.log("Data:", data);
         console.log("------------------------------------------");
 
-        const { name, email, phone, details, budget, urgency, vehicle, serviceType, productName } = data;
+        const { name, email, phone, details, budget, urgency, vehicle, serviceType, productName, color, size, quantity, delivery } = data;
 
         const subject = type === 'product'
             ? `Shop Order Inquiry: ${productName}`
@@ -41,11 +41,16 @@ export async function POST(request: Request) {
             htmlBody += `
                 <ul>
                     <li><strong>Product:</strong> ${productName}</li>
+                    <li><strong>Variant/Color:</strong> ${color || 'N/A'}</li>
+                    <li><strong>Size:</strong> ${size || 'N/A'}</li>
+                    <li><strong>Quantity:</strong> ${quantity || '1'}</li>
+                    <li><strong>Delivery Preference:</strong> ${delivery}</li>
+                    <li><br/></li>
                     <li><strong>Customer Name:</strong> ${name}</li>
                     <li><strong>Phone:</strong> ${phone}</li>
                     <li><strong>Email:</strong> ${email}</li>
                 </ul>
-                <p><strong>Note:</strong> Customer is interested in direct order for ${productName}.</p>
+                <p><strong>Note:</strong> Customer is interested in direct order for ${productName}. They have chosen ${delivery} and would like ${quantity} ${size ? `(Size: ${size})` : ''} in ${color}.</p>
             `;
         } else if (type === 'service') {
             htmlBody += `

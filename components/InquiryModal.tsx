@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ArrowRight, Upload, AlertTriangle } from "lucide-react";
+import { X, ArrowRight, Upload, AlertTriangle, ShoppingCart } from "lucide-react";
+import { products, Product } from "@/lib/products";
 
 type ModalType = "service" | "build" | "product";
 
@@ -14,6 +15,7 @@ interface InquiryModalProps {
 }
 
 export default function InquiryModal({ isOpen, onClose, initialType, productName }: InquiryModalProps) {
+    const selectedProduct = products.find(p => p.name === productName);
     const [step, setStep] = useState(1);
     const [budget, setBudget] = useState("");
 
@@ -22,11 +24,16 @@ export default function InquiryModal({ isOpen, onClose, initialType, productName
         name: "",
         email: "",
         phone: "",
-        serviceType: "Welding Repair",
+        serviceType: productName || "Welding Repair",
         urgency: "Standard",
         vehicle: { year: "", make: "", model: "" },
         goal: "",
-        details: ""
+        details: "",
+        // Supply specific
+        color: selectedProduct?.options?.colors?.[0] || "",
+        size: selectedProduct?.options?.sizes?.[0] || "",
+        quantity: "1",
+        delivery: "Pickup"
     });
 
     // Submission State
@@ -47,7 +54,11 @@ export default function InquiryModal({ isOpen, onClose, initialType, productName
             urgency: "Standard",
             vehicle: { year: "", make: "", model: "" },
             goal: "",
-            details: ""
+            details: "",
+            color: selectedProduct?.options?.colors?.[0] || "",
+            size: selectedProduct?.options?.sizes?.[0] || "",
+            quantity: "1",
+            delivery: "Pickup"
         });
         setSubmitStatus("idle");
     };
@@ -85,7 +96,12 @@ export default function InquiryModal({ isOpen, onClose, initialType, productName
                 data: {
                     ...formData,
                     budget: isSimpleForm ? (initialType === 'product' ? 'Product Order' : null) : budget,
-                    productName: initialType === 'product' ? productName : undefined
+                    productName: initialType === 'product' ? productName : undefined,
+                    // Additional supply fields
+                    color: initialType === 'product' ? formData.color : undefined,
+                    size: initialType === 'product' ? formData.size : undefined,
+                    quantity: initialType === 'product' ? formData.quantity : undefined,
+                    delivery: initialType === 'product' ? formData.delivery : undefined
                 }
             };
 
@@ -168,8 +184,137 @@ export default function InquiryModal({ isOpen, onClose, initialType, productName
                             </div>
 
                             {/* Content Flow */}
-                            {isSimpleForm ? (
-                                // SCENARIO A: SERVICE / PRODUCT (Low Friction)
+                            {initialType === 'product' ? (
+                                // SCENARIO C: PRODUCT (Custom Supply Form)
+                                <form onSubmit={handleSubmit} className="space-y-6">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        {/* Product Context */}
+                                        <div className="md:col-span-2 bg-white/5 border border-white/10 p-4 flex items-center gap-4">
+                                            <div
+                                                className="w-20 h-20 bg-cover bg-center border border-white/10"
+                                                style={{ backgroundImage: `url('${selectedProduct?.image}')` }}
+                                            />
+                                            <div>
+                                                <h4 className="font-heading text-lg uppercase text-white">{selectedProduct?.name}</h4>
+                                                <p className="font-mono text-xs text-stainless uppercase tracking-widest">{selectedProduct?.price}</p>
+                                            </div>
+                                        </div>
+
+                                        {/* Options Grid */}
+                                        {selectedProduct?.options?.colors && (
+                                            <div className="space-y-2">
+                                                <label className="text-xs uppercase tracking-widest text-stainless block">Color / Style</label>
+                                                <select
+                                                    value={formData.color}
+                                                    onChange={(e) => handleInputChange("color", e.target.value)}
+                                                    className="w-full bg-page-bg border border-white/20 text-white p-3 rounded-none focus:border-white outline-none font-mono text-sm"
+                                                >
+                                                    {selectedProduct.options.colors.map(c => <option key={c}>{c}</option>)}
+                                                </select>
+                                            </div>
+                                        )}
+
+                                        {selectedProduct?.options?.sizes && (
+                                            <div className="space-y-2">
+                                                <label className="text-xs uppercase tracking-widest text-stainless block">Size</label>
+                                                <select
+                                                    value={formData.size}
+                                                    onChange={(e) => handleInputChange("size", e.target.value)}
+                                                    className="w-full bg-page-bg border border-white/20 text-white p-3 rounded-none focus:border-white outline-none font-mono text-sm"
+                                                >
+                                                    {selectedProduct.options.sizes.map(s => <option key={s}>{s}</option>)}
+                                                </select>
+                                            </div>
+                                        )}
+
+                                        <div className="space-y-2">
+                                            <label className="text-xs uppercase tracking-widest text-stainless block">Quantity</label>
+                                            <input
+                                                type="number"
+                                                min="1"
+                                                value={formData.quantity}
+                                                onChange={(e) => handleInputChange("quantity", e.target.value)}
+                                                className="w-full bg-page-bg border border-white/20 text-white p-3 rounded-none focus:border-white outline-none font-mono text-sm"
+                                            />
+                                        </div>
+
+                                        <div className="space-y-2">
+                                            <label className="text-xs uppercase tracking-widest text-stainless block">Preference</label>
+                                            <div className="flex gap-4">
+                                                <label className="flex items-center gap-2 text-sm text-stainless cursor-pointer">
+                                                    <input
+                                                        type="radio"
+                                                        name="delivery"
+                                                        value="Pickup"
+                                                        checked={formData.delivery === "Pickup"}
+                                                        onChange={(e) => handleInputChange("delivery", e.target.value)}
+                                                        className="accent-white"
+                                                    /> Shop Pickup
+                                                </label>
+                                                <label className="flex items-center gap-2 text-sm text-stainless cursor-pointer">
+                                                    <input
+                                                        type="radio"
+                                                        name="delivery"
+                                                        value="Shipping"
+                                                        checked={formData.delivery === "Shipping"}
+                                                        onChange={(e) => handleInputChange("delivery", e.target.value)}
+                                                        className="accent-white"
+                                                    /> Shipping
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Contact Section */}
+                                    <div className="space-y-2 pt-4 border-t border-white/10">
+                                        <label className="text-xs uppercase tracking-widest text-stainless block font-bold mb-4 flex items-center gap-2">
+                                            <ShoppingCart className="w-4 h-4 text-white" />
+                                            Customer Information
+                                        </label>
+                                        <input
+                                            required
+                                            type="text"
+                                            placeholder="Full Name"
+                                            value={formData.name}
+                                            onChange={(e) => handleInputChange("name", e.target.value)}
+                                            className="w-full bg-page-bg border border-white/20 text-white p-3 rounded-none focus:border-white outline-none mb-3 font-mono text-sm"
+                                        />
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                            <input
+                                                required
+                                                type="tel"
+                                                placeholder="Phone (For Friday Shipping)"
+                                                value={formData.phone}
+                                                onChange={(e) => handleInputChange("phone", e.target.value)}
+                                                className="w-full bg-page-bg border border-white/20 text-white p-3 rounded-none focus:border-white outline-none font-mono text-sm"
+                                            />
+                                            <input
+                                                required
+                                                type="email"
+                                                placeholder="Email Address"
+                                                value={formData.email}
+                                                onChange={(e) => handleInputChange("email", e.target.value)}
+                                                className="w-full bg-page-bg border border-white/20 text-white p-3 rounded-none focus:border-white outline-none font-mono text-sm"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    {submitStatus === 'error' && (
+                                        <div className="text-red-500 text-xs uppercase tracking-widest bg-red-500/10 p-3 border border-red-500/20">
+                                            {errorMessage || "Something went wrong. Please try again."}
+                                        </div>
+                                    )}
+
+                                    <button
+                                        type="submit"
+                                        disabled={isSubmitting}
+                                        className="w-full bg-white text-black font-heading font-bold uppercase py-4 tracking-widest hover:bg-stainless transition-colors rounded-none mt-4 disabled:opacity-50 disabled:cursor-not-allowed"
+                                    >
+                                        {isSubmitting ? "Processing..." : "Submit Order Request"}
+                                    </button>
+                                </form>
+                            ) : initialType === 'service' ? (
+                                // SCENARIO A: SERVICE (Low Friction)
                                 <form onSubmit={handleSubmit} className="space-y-6">
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div className="space-y-2">
