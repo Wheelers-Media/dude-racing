@@ -26,16 +26,28 @@ export async function POST(request: Request) {
         console.log("Data:", data);
         console.log("------------------------------------------");
 
-        const { name, email, phone, details, budget, urgency, vehicle, serviceType } = data;
+        const { name, email, phone, details, budget, urgency, vehicle, serviceType, productName } = data;
 
-        const subject = type === 'service'
-            ? `New Service Inquiry: ${name} - ${serviceType}`
-            : `New Custom Build Request: ${name}`;
+        const subject = type === 'product'
+            ? `Shop Order Inquiry: ${productName}`
+            : type === 'service'
+                ? `New Service Inquiry: ${name} - ${serviceType}`
+                : `New Custom Build Request: ${name}`;
 
         // Construct Email Body
-        let htmlBody = `<h1>New Lead: ${type === 'service' ? 'Service Inquiry' : 'Custom Build'}</h1>`;
+        let htmlBody = `<h1>New Lead: ${type === 'product' ? 'Shop Order' : type === 'service' ? 'Service Inquiry' : 'Custom Build'}</h1>`;
 
-        if (type === 'service') {
+        if (type === 'product') {
+            htmlBody += `
+                <ul>
+                    <li><strong>Product:</strong> ${productName}</li>
+                    <li><strong>Customer Name:</strong> ${name}</li>
+                    <li><strong>Phone:</strong> ${phone}</li>
+                    <li><strong>Email:</strong> ${email}</li>
+                </ul>
+                <p><strong>Note:</strong> Customer is interested in direct order for ${productName}.</p>
+            `;
+        } else if (type === 'service') {
             htmlBody += `
                 <ul>
                     <li><strong>Name:</strong> ${name}</li>

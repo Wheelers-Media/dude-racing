@@ -3,8 +3,10 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Package, Mail } from "lucide-react";
+import { useInquiryModal } from "@/context/InquiryModalContext";
 
 export default function ShopPage() {
+    const { openModal } = useInquiryModal();
     const products = [
         {
             id: 1,
@@ -100,14 +102,14 @@ export default function ShopPage() {
                                     </span>
                                 </div>
 
-                                {/* Direct Inquiry Link */}
-                                <a
-                                    href={`mailto:info@duderacing.com?subject=Order Inquiry: ${product.name}`}
+                                {/* Form Inquiry */}
+                                <button
+                                    onClick={() => openModal('product', product.name)}
                                     className="w-full bg-white text-black font-heading font-bold uppercase py-4 tracking-widest hover:bg-stainless transition-colors flex items-center justify-center gap-2 cursor-pointer"
                                 >
                                     <Mail className="w-4 h-4" />
                                     Order Direct
-                                </a>
+                                </button>
                             </div>
                         </div>
                     ))}

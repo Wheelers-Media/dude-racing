@@ -4,15 +4,16 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ArrowRight, Upload, AlertTriangle } from "lucide-react";
 
-type ModalType = "service" | "build";
+type ModalType = "service" | "build" | "product";
 
 interface InquiryModalProps {
     isOpen: boolean;
     onClose: () => void;
     initialType: ModalType;
+    productName?: string;
 }
 
-export default function InquiryModal({ isOpen, onClose, initialType }: InquiryModalProps) {
+export default function InquiryModal({ isOpen, onClose, initialType, productName }: InquiryModalProps) {
     const [step, setStep] = useState(1);
     const [budget, setBudget] = useState("");
 
@@ -33,7 +34,7 @@ export default function InquiryModal({ isOpen, onClose, initialType }: InquiryMo
     const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 
     // Construct content based on type
-    const isService = initialType === "service";
+    const isSimpleForm = initialType === "service" || initialType === "product";
 
     const resetForm = () => {
         setStep(1);
@@ -42,7 +43,7 @@ export default function InquiryModal({ isOpen, onClose, initialType }: InquiryMo
             name: "",
             email: "",
             phone: "",
-            serviceType: "Welding Repair",
+            serviceType: productName || "Welding Repair",
             urgency: "Standard",
             vehicle: { year: "", make: "", model: "" },
             goal: "",
@@ -83,7 +84,8 @@ export default function InquiryModal({ isOpen, onClose, initialType }: InquiryMo
                 type: initialType,
                 data: {
                     ...formData,
-                    budget: isService ? null : budget,
+                    budget: isSimpleForm ? (initialType === 'product' ? 'Product Order' : null) : budget,
+                    productName: initialType === 'product' ? productName : undefined
                 }
             };
 
@@ -147,7 +149,7 @@ export default function InquiryModal({ isOpen, onClose, initialType }: InquiryMo
                             </div>
                             <h3 className="text-3xl font-heading font-bold text-white uppercase tracking-wider mb-2">Message Sent</h3>
                             <p className="text-stainless text-sm font-mono mb-8 max-w-sm">
-                                Your inquiry has been received. {isService ? "Our team will review your repair request." : "Bob will review your build application."}
+                                Your inquiry has been received. {initialType === 'product' ? `Our team will review your order request for ${productName}.` : isSimpleForm ? "Our team will review your repair request." : "Bob will review your build application."}
                             </p>
                             <button onClick={handleClose} className="bg-white text-black font-heading font-bold uppercase px-8 py-3 tracking-widest hover:bg-stainless transition-colors rounded-none">
                                 Return to Shop
@@ -161,13 +163,13 @@ export default function InquiryModal({ isOpen, onClose, initialType }: InquiryMo
                                     Inquiry Form
                                 </span>
                                 <h2 className="text-2xl md:text-3xl font-heading text-white uppercase tracking-wider">
-                                    {isService ? "Local Fabrication & Repair" : "Start A Custom Project"}
+                                    {initialType === 'product' ? `Order Inquiry: ${productName}` : isSimpleForm ? "Local Fabrication & Repair" : "Start A Custom Project"}
                                 </h2>
                             </div>
 
                             {/* Content Flow */}
-                            {isService ? (
-                                // SCENARIO A: SERVICE (Low Friction)
+                            {isSimpleForm ? (
+                                // SCENARIO A: SERVICE / PRODUCT (Low Friction)
                                 <form onSubmit={handleSubmit} className="space-y-6">
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div className="space-y-2">
