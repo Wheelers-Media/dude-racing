@@ -72,7 +72,7 @@ export default function ShopPage() {
                             {/* Image Container - Square */}
                             <div className="aspect-square relative overflow-hidden bg-white/5 border-b border-white/5">
                                 <div
-                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 md:grayscale md:group-hover:grayscale-0"
+                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 md:grayscale md:group-hover:grayscale-0 grayscale-0"
                                     style={{ backgroundImage: `url('${product.image}')` }}
                                 />
 

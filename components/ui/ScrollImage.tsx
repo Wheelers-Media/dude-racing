@@ -21,19 +21,17 @@ export default function ScrollImage({
 }: ScrollImageProps) {
     const ref = useRef<HTMLDivElement>(null);
 
-    // "amount: 0.5" means 50% of the element must be visible
-    // We can also use margin similar to "-20%" to focus on the center. 
-    // The user asked for "enter the center of the viewport".
-    // "center" usually implies a margin-based approach in intersection observer, 
-    // but useInView with amount:0.5 is a good proxy for "substantial visibility".
-    // To strictly track "center of viewport", margin is better: "0px 0px -50% 0px" starts when top hits center? 
-    // Let's stick to standard `amount: 0.5` for "50% visible" as requested.
-    const isInView = useInView(ref, { amount: 0.5, once: false });
+    // "Hot Zone" = Middle 10% of the screen (-45% top, -45% bottom)
+    // This matches the user's request for precision.
+    const isInView = useInView(ref, {
+        margin: "-45% 0px -45% 0px",
+        once: false
+    });
 
     return (
         <div
             ref={ref}
-            className={classNames("relative overflow-hidden", containerClassName)}
+            className={classNames("relative overflow-hidden w-full h-full", containerClassName)}
         >
             <Image
                 src={src}

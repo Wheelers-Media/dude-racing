@@ -1,4 +1,5 @@
 import { Wrench, Flame, Truck } from "lucide-react";
+import ScrollSpotlight from "./ui/ScrollSpotlight";
 
 const CAPABILITIES = [
     {
@@ -45,9 +46,11 @@ export default function ServiceGrid() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {CAPABILITIES.map((service, index) => (
-                        <div
+                        <ScrollSpotlight
                             key={index}
                             className="group bg-carbon border border-white/10 p-10 hover:border-signal/50 transition-all duration-300 relative overflow-hidden"
+                            activeClassName="max-md:border-signal/50 max-md:bg-white/5 spotlight-active"
+                            inactiveClassName="max-md:border-white/10"
                         >
                             <service.icon className="w-12 h-12 text-stainless mb-8 stroke-1" />
                             <h3 className="text-2xl font-heading text-white uppercase mb-6 tracking-wide">
@@ -63,8 +66,8 @@ export default function ServiceGrid() {
                             </ul>
 
                             {/* Corner Accent */}
-                            <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-stainless/30 group-hover:border-signal/50 transition-colors" />
-                        </div>
+                            <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-stainless/30 group-hover:border-signal/50 max-md:group-[.spotlight-active]:border-signal/50 transition-colors" />
+                        </ScrollSpotlight>
                     ))}
                 </div>
             </div>

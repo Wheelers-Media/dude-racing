@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import DarkMap from "@/components/ui/DarkMap";
 import { MapPin, Clock, Truck, Instagram } from "lucide-react";
 import Image from "next/image";
+import ScrollImage from "@/components/ui/ScrollImage";
 
 
 export default function TheShopPage() {
@@ -54,11 +55,14 @@ export default function TheShopPage() {
                         </div>
                     </div>
                     <div className="order-1 lg:order-2 relative h-[600px] border border-white/10 group">
-                        <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10" />
-                        <div
-                            className="w-full h-full bg-cover bg-center contrast-110 transition-all duration-700"
-                            style={{ backgroundImage: `url('/headshot.jpg')` }}
+                        <ScrollImage
+                            src="/headshot.jpg"
+                            alt="Bob Dudenhoeffer"
+                            fill
+                            className="object-cover"
+                            containerClassName="w-full h-full"
                         />
+                        <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10 pointer-events-none" />
                         <div className="absolute bottom-4 right-4 z-20 bg-black/80 backdrop-blur px-4 py-2 border border-white/10">
                             <span className="text-xs font-mono text-stainless uppercase tracking-widest">Bob Dudenhoeffer // Founder</span>
                         </div>
@@ -124,10 +128,10 @@ export default function TheShopPage() {
                         ].map((src, idx) => (
                             <div key={idx} className="relative aspect-square bg-carbon overflow-hidden group">
                                 <div
-                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110 md:grayscale md:group-hover:grayscale-0"
+                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 md:group-hover:scale-110 md:grayscale md:group-hover:grayscale-0 grayscale-0"
                                     style={{ backgroundImage: `url('${src}')` }}
                                 />
-                                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
+                                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors hidden md:block" />
                             </div>
                         ))}
                     </div>

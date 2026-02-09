@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { ArrowRight, Wrench, Clock, AlertCircle } from "lucide-react";
 import Link from "next/link";
 import ScrollImage from "@/components/ui/ScrollImage";
+import ScrollSpotlight from "@/components/ui/ScrollSpotlight";
 
 export default function ProjectsPage() {
     return (
@@ -34,7 +35,10 @@ export default function ProjectsPage() {
                     </h2>
                     <div className="grid grid-cols-1 gap-16">
                         {/* Build 1: Twin-Turbo LS 370Z (The Hero) */}
-                        <div className="group relative border border-white/10 overflow-hidden bg-carbon grid grid-cols-1 lg:grid-cols-2">
+                        <ScrollSpotlight
+                            className="group relative border border-white/10 overflow-hidden bg-carbon grid grid-cols-1 lg:grid-cols-2"
+                            activeClassName="max-md:border-signal/50 spotlight-active"
+                        >
                             <div className="relative h-[400px] lg:h-auto overflow-hidden">
                                 <ScrollImage
                                     src="/LS-370Z.jpg"
@@ -52,7 +56,7 @@ export default function ProjectsPage() {
                                         </span>
                                     ))}
                                 </div>
-                                <h3 className="text-3xl lg:text-5xl font-heading font-bold text-white uppercase tracking-tighter mb-2 leading-none">
+                                <h3 className="text-3xl lg:text-5xl font-heading font-bold text-white uppercase tracking-tighter mb-2 leading-none transition-colors group-hover:text-signal max-md:group-[.spotlight-active]:text-signal">
                                     Twin-Turbo LS 370Z
                                 </h3>
                                 <p className="text-blue-400 font-mono text-xs uppercase tracking-widest mb-6 border-b border-white/10 pb-4 inline-block">
@@ -65,13 +69,16 @@ export default function ProjectsPage() {
                                     Coming Soon
                                 </span>
                             </div>
-                        </div>
+                        </ScrollSpotlight>
 
                         {/* Secondary Grid for S2000 and F-350 */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {/* Build 2: K-Swapped S2000 */}
-                            <div className="group relative h-[500px] border border-white/10 overflow-hidden bg-carbon flex flex-col justify-end">
-                                <div className="absolute inset-0 z-0">
+                            <ScrollSpotlight
+                                className="group relative border border-white/10 overflow-hidden bg-carbon flex flex-col"
+                                activeClassName="max-md:border-signal/50 spotlight-active"
+                            >
+                                <div className="relative h-[400px] w-full overflow-hidden border-b border-white/5">
                                     <ScrollImage
                                         src="/s2000.jpg"
                                         alt="K-Swapped S2000"
@@ -80,32 +87,35 @@ export default function ProjectsPage() {
                                     />
                                 </div>
 
-                                <div className="relative z-20 p-8">
-                                    <div className="flex gap-2 mb-3 flex-wrap">
+                                <div className="p-8 flex-1 flex flex-col justify-center">
+                                    <div className="flex gap-2 mb-4 flex-wrap">
                                         {["Fabrication", "Turbo System", "Stainless"].map(tag => (
-                                            <span key={tag} className="text-[10px] font-mono uppercase tracking-widest text-signal border border-signal/30 bg-signal/5 px-2 py-1 rounded-full">
+                                            <span key={tag} className="text-[10px] font-mono uppercase tracking-widest text-arc border border-arc/30 bg-arc/5 px-2 py-1 rounded-full">
                                                 {tag}
                                             </span>
                                         ))}
                                     </div>
-                                    <h3 className="text-3xl font-heading font-bold text-white uppercase tracking-tighter mb-1">
+                                    <h3 className="text-3xl font-heading font-bold text-white uppercase tracking-tighter mb-2 transition-colors group-hover:text-signal max-md:group-[.spotlight-active]:text-signal">
                                         The K-Swapped S2000
                                     </h3>
-                                    <p className="text-yellow-400 font-mono text-xs uppercase tracking-widest mb-4">
+                                    <p className="text-blue-400 font-mono text-xs uppercase tracking-widest mb-4 border-b border-white/10 pb-4 inline-block">
                                         Turbocharged / Sidewinder Manifold
                                     </p>
-                                    <p className="text-stainless/80 text-sm mb-6 line-clamp-3">
+                                    <p className="text-stainless text-sm leading-relaxed mb-6 line-clamp-3">
                                         A standard S2000 is balanced; a Turbo K24 is a weapon. We fabricated a complete hot-side solution including a custom 3-inch downpipe.
                                     </p>
-                                    <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-zinc-500 border-b border-transparent pb-1 cursor-not-allowed">
+                                    <span className="mt-auto flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-zinc-500 border-b border-transparent pb-1 cursor-not-allowed">
                                         Coming Soon
                                     </span>
                                 </div>
-                            </div>
+                            </ScrollSpotlight>
 
                             {/* Build 3: Hayabusa Smart Car */}
-                            <div className="group relative h-[500px] border border-white/10 overflow-hidden bg-carbon flex flex-col justify-end">
-                                <div className="absolute inset-0 z-0">
+                            <ScrollSpotlight
+                                className="group relative border border-white/10 overflow-hidden bg-carbon flex flex-col"
+                                activeClassName="max-md:border-signal/50 spotlight-active"
+                            >
+                                <div className="relative h-[400px] w-full overflow-hidden border-b border-white/5">
                                     <ScrollImage
                                         src="/projects/smart-main.jpg"
                                         alt="Hayabusa Smart Car"
@@ -114,28 +124,28 @@ export default function ProjectsPage() {
                                     />
                                 </div>
 
-                                <div className="relative z-20 p-8">
-                                    <div className="flex gap-2 mb-3 flex-wrap">
+                                <div className="p-8 flex-1 flex flex-col justify-center">
+                                    <div className="flex gap-2 mb-4 flex-wrap">
                                         {["ENGINE SWAP", "CUSTOM SUBFRAME", "CHAIN DRIVE"].map(tag => (
-                                            <span key={tag} className="text-[10px] font-mono uppercase tracking-widest text-signal border border-signal/30 bg-signal/10 px-2 py-1 rounded-full">
+                                            <span key={tag} className="text-[10px] font-mono uppercase tracking-widest text-arc border border-arc/30 bg-arc/5 px-2 py-1 rounded-full">
                                                 {tag}
                                             </span>
                                         ))}
                                     </div>
-                                    <h3 className="text-3xl font-heading font-bold text-white uppercase tracking-tighter mb-1">
+                                    <h3 className="text-3xl font-heading font-bold text-white uppercase tracking-tighter mb-2 transition-colors group-hover:text-signal max-md:group-[.spotlight-active]:text-signal">
                                         HAYABUSA SMART CAR
                                     </h3>
-                                    <p className="text-red-500 font-mono text-xs uppercase tracking-widest mb-4">
+                                    <p className="text-blue-400 font-mono text-xs uppercase tracking-widest mb-4 border-b border-white/10 pb-4 inline-block">
                                         1300cc / Chain Driven / Track Monster
                                     </p>
-                                    <p className="text-stainless/80 text-sm mb-6 line-clamp-3">
+                                    <p className="text-stainless text-sm leading-relaxed mb-6 line-clamp-3">
                                         The ultimate power-to-weight ratio. We fabricated a custom rear subframe to cradle a 1300cc Hayabusa engine, converting this city commuter into a chain-driven track monster.
                                     </p>
-                                    <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-zinc-500 border-b border-transparent pb-1 cursor-not-allowed w-fit">
+                                    <span className="mt-auto flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-zinc-500 border-b border-transparent pb-1 cursor-not-allowed w-fit">
                                         Coming Soon
                                     </span>
                                 </div>
-                            </div>
+                            </ScrollSpotlight>
                         </div>
                     </div>
                 </section>
@@ -157,9 +167,13 @@ export default function ProjectsPage() {
                             { year: "2016", project: "Nissan 370Z", scope: "LSX Twin turbo build with custom front end.", notes: "Custom fitted turbos/ hood exits, custom electric power steering, dual oil coolers, custom tube frame front end" },
                             { year: "1969", project: "Camaro", scope: "Full dual SS exhaust with cutouts.", notes: "Tucked as close to the body as possible made for a lot of complex areas. Axle dump style exits." },
                         ].map((item, i) => (
-                            <div key={i} className="bg-zinc-900/50 border border-white/5 p-6 space-y-3">
+                            <ScrollSpotlight
+                                key={i}
+                                className="group bg-zinc-900/50 border border-white/5 p-6 space-y-3"
+                                activeClassName="max-md:border-signal/50 spotlight-active"
+                            >
                                 <div className="flex justify-between items-baseline border-b border-white/5 pb-2">
-                                    <span className="text-white font-display font-bold text-lg">{item.project}</span>
+                                    <span className="text-white font-display font-bold text-lg transition-colors group-hover:text-signal max-md:group-[.spotlight-active]:text-signal">{item.project}</span>
                                     <span className="text-signal font-mono text-xs">{item.year}</span>
                                 </div>
                                 <div>
@@ -170,7 +184,7 @@ export default function ProjectsPage() {
                                     <span className="text-xs text-zinc-500 uppercase tracking-wider block mb-1">Notes</span>
                                     <p className="text-zinc-400 text-xs italic leading-relaxed">"{item.notes}"</p>
                                 </div>
-                            </div>
+                            </ScrollSpotlight>
                         ))}
                     </div>
 
@@ -182,7 +196,7 @@ export default function ProjectsPage() {
                                     <th className="py-4 w-[10%]">Year</th>
                                     <th className="py-4 w-[20%]">Project</th>
                                     <th className="py-4 w-[30%]">Scope</th>
-                                    <th className="py-4 w-[40%] text-left">Notes</th> {/* Changed to Left Align */}
+                                    <th className="py-4 w-[40%] text-left">Notes</th>
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-white/5 text-zinc-400">

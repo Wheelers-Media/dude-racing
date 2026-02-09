@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import ScrollImage from "./ui/ScrollImage";
 
 export default function FreshFromBench() {
     return (
@@ -9,8 +10,13 @@ export default function FreshFromBench() {
 
                     {/* Left: Large Visual */}
                     <div className="relative min-h-[600px] bg-neutral-900 overflow-hidden">
-                        <div className="absolute inset-0 bg-[url('/s2000.jpg')] bg-cover bg-center grayscale contrast-125 opacity-80" />
-                        <div className="absolute top-6 left-6 bg-white text-black px-4 py-1 text-xs font-bold uppercase tracking-widest">
+                        <ScrollImage
+                            src="/s2000.jpg"
+                            alt="K24 S2000 Swap"
+                            fill
+                            className="object-cover opacity-80 contrast-125"
+                        />
+                        <div className="absolute top-6 left-6 bg-white text-black px-4 py-1 text-xs font-bold uppercase tracking-widest z-10">
                             Latest Build
                         </div>
                     </div>

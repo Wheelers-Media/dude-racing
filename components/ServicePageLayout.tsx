@@ -6,6 +6,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import ScrollImage from "./ui/ScrollImage";
+import ScrollSpotlight from "./ui/ScrollSpotlight";
 
 interface TimelineStep {
     title: string;
@@ -127,10 +128,14 @@ export default function ServicePageLayout({
                             </h3>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/10">
                                 {specs.map((spec, index) => (
-                                    <div key={index} className="bg-carbon p-6 flex justify-between items-center group hover:bg-white/5 transition-colors">
+                                    <ScrollSpotlight
+                                        key={index}
+                                        className="bg-carbon p-6 flex justify-between items-center group hover:bg-white/5 transition-colors"
+                                        activeClassName="max-md:bg-white/5 max-md:border-l-4 max-md:border-signal"
+                                    >
                                         <span className="text-xs uppercase tracking-widest text-stainless">{spec.label}</span>
                                         <span className="font-mono text-white text-sm">{spec.value}</span>
-                                    </div>
+                                    </ScrollSpotlight>
                                 ))}
                             </div>
                         </div>
@@ -142,11 +147,15 @@ export default function ServicePageLayout({
                             </h3>
                             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                                 {materials.map((mat, index) => (
-                                    <div key={index} className="aspect-square bg-carbon border border-white/10 p-4 flex flex-col justify-between hover:border-stainless transition-colors group">
+                                    <ScrollSpotlight
+                                        key={index}
+                                        className="aspect-square bg-carbon border border-white/10 p-4 flex flex-col justify-between hover:border-stainless transition-colors group"
+                                        activeClassName="max-md:border-signal/50 spotlight-active"
+                                    >
                                         <span className="text-xs font-mono text-stainless/50">{mat.number}</span>
-                                        <span className="text-3xl font-heading font-bold text-white group-hover:text-blue-400 transition-colors">{mat.symbol}</span>
+                                        <span className="text-3xl font-heading font-bold text-white group-hover:text-blue-400 max-md:group-[.spotlight-active]:text-blue-400 transition-colors">{mat.symbol}</span>
                                         <span className="text-[10px] uppercase tracking-widest text-stainless">{mat.name}</span>
-                                    </div>
+                                    </ScrollSpotlight>
                                 ))}
                             </div>
                         </div>

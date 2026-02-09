@@ -1,4 +1,6 @@
 import Image from "next/image";
+import ScrollImage from "./ui/ScrollImage";
+import ScrollSpotlight from "./ui/ScrollSpotlight";
 
 export default function Philosophy() {
     return (
@@ -18,23 +20,34 @@ export default function Philosophy() {
                         </p>
 
                         <div className="grid grid-cols-2 gap-8 border-t border-white/10 pt-8">
-                            <div>
-                                <h4 className="text-2xl font-heading text-white mb-2">100%</h4>
+                            <ScrollSpotlight
+                                className="group"
+                                activeClassName="text-signal"
+                            >
+                                <h4 className="text-2xl font-heading text-white mb-2 max-md:group-[.text-signal]:text-signal transition-colors">100%</h4>
                                 <span className="text-xs text-stainless uppercase tracking-wider">In-House Fabrication</span>
-                            </div>
-                            <div>
-                                <h4 className="text-2xl font-heading text-white mb-2">Lifetime</h4>
+                            </ScrollSpotlight>
+                            <ScrollSpotlight
+                                className="group"
+                                activeClassName="text-signal"
+                            >
+                                <h4 className="text-2xl font-heading text-white mb-2 max-md:group-[.text-signal]:text-signal transition-colors">Lifetime</h4>
                                 <span className="text-xs text-stainless uppercase tracking-wider">Weld Warranty</span>
-                            </div>
+                            </ScrollSpotlight>
                         </div>
                     </div>
 
                     <div className="relative h-[600px] w-full bg-carbon border border-white/5 p-2">
                         {/* Visual: Use a "Dime Stack" macro weld image placeholder */}
-                        <div className="w-full h-full relative bg-neutral-800 overflow-hidden md:grayscale md:hover:grayscale-0 transition-all duration-700">
+                        <div className="w-full h-full relative bg-neutral-800 overflow-hidden">
                             {/* Placeholder for weld image */}
-                            <div className="absolute inset-0 bg-[url('/tig-welding.jpg')] bg-cover bg-center opacity-60"></div>
-                            <div className="absolute bottom-8 left-8 bg-black/80 backdrop-blur px-6 py-3 border-l-2 border-white">
+                            <ScrollImage
+                                src="/tig-welding.jpg"
+                                alt="Precision TIG Welding"
+                                fill
+                                className="object-cover opacity-60"
+                            />
+                            <div className="absolute bottom-8 left-8 bg-black/80 backdrop-blur px-6 py-3 border-l-2 border-white z-10">
                                 <span className="text-white text-xs font-heading tracking-widest uppercase">Precision TIG Welding</span>
                             </div>
                         </div>
