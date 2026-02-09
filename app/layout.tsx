@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: "Dude Racing",
     images: [
       {
-        url: "/thumbnail.png",
+        url: "/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: "Dude Racing Custom Fabrication & Mobile Welding",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dude Racing | Built for Speed",
     description: "Custom fabrication, turbo systems, and mobile welding in Grande Prairie, AB.",
-    images: ["/thumbnail.png"],
+    images: ["/opengraph-image.png"],
     creator: "@DudeRacing",
   },
   robots: {

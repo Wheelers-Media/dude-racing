@@ -21,10 +21,9 @@ export default function ScrollImage({
 }: ScrollImageProps) {
     const ref = useRef<HTMLDivElement>(null);
 
-    // "Hot Zone" = Middle 10% of the screen (-45% top, -45% bottom)
-    // This matches the user's request for precision.
+    // "Hot Zone" = Middle 40% of the screen (-30% top, -30% bottom)
     const isInView = useInView(ref, {
-        margin: "-45% 0px -45% 0px",
+        margin: "-30% 0px -30% 0px",
         once: false
     });
 
