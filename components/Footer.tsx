@@ -14,8 +14,21 @@ export default function Footer() {
 
                     {/* Brand */}
                     <div className="space-y-6">
-                        <Link href="/" className="block">
-                            <Image src="/dude-racing-logo-white.png" alt="DudeRacing" width={150} height={28} className="h-7 w-auto" />
+                        <Link href="/" className="block relative group">
+                            <Image
+                                src="/dude-racing-logo-white.png"
+                                alt="DudeRacing"
+                                width={150}
+                                height={28}
+                                className="h-7 w-auto group-hover:opacity-0 transition-opacity duration-300"
+                            />
+                            <Image
+                                src="/dude-racing-logo-yellow.png"
+                                alt="DudeRacing"
+                                width={150}
+                                height={28}
+                                className="h-7 w-auto absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                            />
                         </Link>
                         <p className="text-stainless text-sm">
                             Est. 2018
@@ -88,7 +101,7 @@ export default function Footer() {
 
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-stainless/40 uppercase tracking-widest">
                     <p>© 2026 DudeRacing. All Rights Reserved.</p>
-                    <p>ENGINEERED FOR SPEED</p>
+                    <p>BUILT FOR SPEED</p>
                 </div>
             </div>
         </footer>

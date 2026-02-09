@@ -19,15 +19,28 @@ export default function Header() {
         { label: "Fabrication", href: "/services/fabrication" },
         { label: "Exhausts", href: "/services/exhausts" },
         { label: "Transport", href: "/services/transport" },
-        { label: "Mobile Repair & Hoist", href: "/services/mobile-repair" },
+        { label: "Mobile Repair", href: "/services/mobile-repair" },
     ];
 
     return (
         <header className="fixed top-0 left-0 w-full z-50 bg-carbon/80 backdrop-blur-md border-b border-white/5">
             <div className="max-w-[1400px] mx-auto px-6 h-20 flex items-center justify-between relative z-50">
                 {/* Logo */}
-                <Link href="/" className="flex items-center">
-                    <Image src="/dude-racing-logo-white.png" alt="DudeRacing" width={200} height={32} className="h-6 md:h-5 w-auto" />
+                <Link href="/" className="flex items-center group relative">
+                    <Image
+                        src="/dude-racing-logo-white.png"
+                        alt="DudeRacing"
+                        width={200}
+                        height={32}
+                        className="h-6 md:h-5 w-auto group-hover:opacity-0 transition-opacity duration-300"
+                    />
+                    <Image
+                        src="/dude-racing-logo-yellow.png"
+                        alt="DudeRacing"
+                        width={200}
+                        height={32}
+                        className="h-6 md:h-5 w-auto absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    />
                 </Link>
 
                 {/* Desktop Nav */}

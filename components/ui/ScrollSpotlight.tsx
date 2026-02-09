@@ -18,8 +18,8 @@ interface ScrollSpotlightProps extends React.HTMLAttributes<HTMLDivElement> {
 export default function ScrollSpotlight({
     children,
     className,
-    activeClassName = "border-signal grayscale-0 opacity-100", // Default Active Defaults
-    inactiveClassName = "border-white/10 grayscale opacity-50", // Default Inactive Defaults
+    activeClassName = "max-md:border-signal/50 max-md:grayscale-0 max-md:opacity-100", // Default Active Defaults
+    inactiveClassName = "max-md:border-white/10 max-md:grayscale max-md:opacity-50", // Default Inactive Defaults
     ...props
 }: ScrollSpotlightProps) {
     const ref = useRef<HTMLDivElement>(null);

@@ -70,10 +70,13 @@ export default function InquiryModal({ isOpen, onClose, initialType }: InquiryMo
         }));
     };
 
+    const [errorMessage, setErrorMessage] = useState("");
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
         setSubmitStatus("idle");
+        setErrorMessage("");
 
         try {
             const payload = {
@@ -90,11 +93,16 @@ export default function InquiryModal({ isOpen, onClose, initialType }: InquiryMo
                 body: JSON.stringify(payload)
             });
 
-            if (!res.ok) throw new Error("Failed to submit");
+            const result = await res.json();
+
+            if (!res.ok) {
+                throw new Error(result.error || "Failed to submit");
+            }
 
             setSubmitStatus("success");
-        } catch (error) {
+        } catch (error: any) {
             console.error(error);
+            setErrorMessage(error.message || "Something went wrong. Please try again.");
             setSubmitStatus("error");
         } finally {
             setIsSubmitting(false);
@@ -237,7 +245,7 @@ export default function InquiryModal({ isOpen, onClose, initialType }: InquiryMo
 
                                     {submitStatus === 'error' && (
                                         <div className="text-red-500 text-xs uppercase tracking-widest bg-red-500/10 p-3 border border-red-500/20">
-                                            Something went wrong. Please try again.
+                                            {errorMessage || "Something went wrong. Please try again."}
                                         </div>
                                     )}
 
@@ -368,7 +376,7 @@ export default function InquiryModal({ isOpen, onClose, initialType }: InquiryMo
 
                                             {submitStatus === 'error' && (
                                                 <div className="text-red-500 text-xs uppercase tracking-widest bg-red-500/10 p-3 border border-red-500/20">
-                                                    Something went wrong. Please try again.
+                                                    {errorMessage || "Something went wrong. Please try again."}
                                                 </div>
                                             )}
 

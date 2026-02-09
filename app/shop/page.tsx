@@ -53,7 +53,7 @@ export default function ShopPage() {
                 />
 
                 <div className="relative z-20 max-w-[1400px] mx-auto px-6 w-full text-center">
-                    <h1 className="text-4xl md:text-7xl font-heading font-bold text-white uppercase tracking-widest leading-normal mb-4">
+                    <h1 className="text-3xl md:text-7xl font-heading font-bold text-white uppercase tracking-widest leading-normal mb-4">
                         SHOP GOODS // SMALL BATCH
                     </h1>
                     <p className="text-stainless text-sm md:text-lg font-mono uppercase tracking-widest">

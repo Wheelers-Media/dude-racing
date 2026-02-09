@@ -16,11 +16,11 @@ export default function ProjectsPage() {
             <section className="relative w-full h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden border-b border-white/10 bg-noise">
                 {/* Minimalist Hero */}
                 <div className="relative z-20 max-w-[1400px] mx-auto px-6 w-full text-center">
-                    <h1 className="text-4xl md:text-7xl font-heading font-bold text-white uppercase tracking-widest leading-none mb-4">
+                    <h1 className="text-3xl md:text-6xl font-heading font-bold text-white uppercase tracking-widest leading-none mb-4">
                         Selected Builds
                     </h1>
                     <p className="text-stainless text-sm md:text-lg font-mono uppercase tracking-widest">
-                        Engineering Case Studies & Current Work
+                        Fabrication Case Studies & Current Work
                     </p>
                 </div>
             </section>
@@ -63,10 +63,10 @@ export default function ProjectsPage() {
                                     Chromoly Tube Chassis / Nelson Racing Turbos
                                 </p>
                                 <p className="text-stainless text-sm leading-relaxed mb-8 max-w-lg">
-                                    We cut the front clip back to the strut towers to engineer zero airflow limits. The solution: A full removable Chromoly tube chassis housing twin Nelson Racing 62/60 mirror-image turbos. Features custom ducted cooling and a hood-exit exhaust.
+                                    We cut the front clip back to the strut towers to ensure zero airflow limits. The solution: A full removable Chromoly tube chassis housing twin Nelson Racing 62/60 mirror-image turbos. Features custom ducted cooling and a hood-exit exhaust.
                                 </p>
                                 <span className="self-start flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-zinc-500 border-b border-transparent pb-1 cursor-not-allowed">
-                                    Coming Soon
+                                    Case Study Coming Soon
                                 </span>
                             </div>
                         </ScrollSpotlight>
@@ -105,7 +105,7 @@ export default function ProjectsPage() {
                                         A standard S2000 is balanced; a Turbo K24 is a weapon. We fabricated a complete hot-side solution including a custom 3-inch downpipe.
                                     </p>
                                     <span className="mt-auto flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-zinc-500 border-b border-transparent pb-1 cursor-not-allowed">
-                                        Coming Soon
+                                        Case Study Coming Soon
                                     </span>
                                 </div>
                             </ScrollSpotlight>
@@ -117,10 +117,10 @@ export default function ProjectsPage() {
                             >
                                 <div className="relative h-[400px] w-full overflow-hidden border-b border-white/5">
                                     <ScrollImage
-                                        src="/projects/smart-main.jpg"
+                                        src="/projects/smart-main-v2.jpg"
                                         alt="Hayabusa Smart Car"
                                         fill
-                                        className="object-cover"
+                                        className="object-cover object-bottom"
                                     />
                                 </div>
 
@@ -142,7 +142,7 @@ export default function ProjectsPage() {
                                         The ultimate power-to-weight ratio. We fabricated a custom rear subframe to cradle a 1300cc Hayabusa engine, converting this city commuter into a chain-driven track monster.
                                     </p>
                                     <span className="mt-auto flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-zinc-500 border-b border-transparent pb-1 cursor-not-allowed w-fit">
-                                        Coming Soon
+                                        Case Study Coming Soon
                                     </span>
                                 </div>
                             </ScrollSpotlight>

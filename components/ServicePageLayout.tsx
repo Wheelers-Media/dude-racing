@@ -51,7 +51,7 @@ export default function ServicePageLayout({
     leadTime,
     children,
     heroImagePosition = "center",
-    timelineTitle = "Engineering Process",
+    timelineTitle = "Fabrication Process",
     specsTitle = "Technical Specifications",
     materialsTitle = "Material Expertise",
     overlayClassName = "bg-black/50",
@@ -80,7 +80,7 @@ export default function ServicePageLayout({
                 </div>
 
                 <div className="relative z-20 max-w-[1400px] mx-auto px-6 w-full">
-                    <h1 className="text-5xl md:text-7xl font-heading font-bold text-white uppercase tracking-widest leading-none mb-4">
+                    <h1 className="text-3xl md:text-7xl font-heading font-bold text-white uppercase tracking-widest leading-none mb-4">
                         {title}
                     </h1>
                     <p className="text-stainless text-xl font-mono uppercase tracking-widest border-l-2 border-white pl-4">

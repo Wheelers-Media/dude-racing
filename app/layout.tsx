@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_CA",
     url: "https://duderacing.ca",
-    title: "Dude Racing | Engineered for Speed",
+    title: "Dude Racing | Built for Speed",
     description: "Custom fabrication, turbo systems, and mobile welding in Grande Prairie, AB.",
     siteName: "Dude Racing",
     images: [
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dude Racing | Engineered for Speed",
+    title: "Dude Racing | Built for Speed",
     description: "Custom fabrication, turbo systems, and mobile welding in Grande Prairie, AB.",
     images: ["/thumbnail.png"],
     creator: "@DudeRacing",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/Favicon-white.png",
+    icon: "/Favicon-black.png",
   },
 };
 

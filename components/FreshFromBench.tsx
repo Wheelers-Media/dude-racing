@@ -47,7 +47,7 @@ export default function FreshFromBench() {
                         </div>
 
                         <button className="group flex items-center gap-4 text-white uppercase tracking-widest text-sm font-bold hover:text-stainless transition-colors">
-                            View Case Study
+                            View Case Study Coming Soon
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                         </button>
                     </div>

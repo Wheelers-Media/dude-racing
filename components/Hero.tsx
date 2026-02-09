@@ -25,7 +25,7 @@ export default function Hero() {
                         playsInline
                         className="w-full h-full object-cover opacity-40"
                     >
-                        <source src="/LandingPage-Hero.webm" type="video/webm" />
+                        <source src="/landingpage-hero.mp4" type="video/mp4" />
                     </video>
                     {/* Gradient Fade to seamless bar */}
                     <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#1A1A1A] to-transparent z-10" />
@@ -41,7 +41,7 @@ export default function Hero() {
                     </h1>
 
                     <p className="text-stainless text-lg md:text-xl max-w-2xl mb-12 font-light">
-                        Precision custom fabrication in Grande Prairie. Engineered for performance, not just display.
+                        Precision custom fabrication in Grande Prairie. Built for performance, not just display.
                     </p>
 
                     {/* Dual CTA: Split-Intent Strategy */}

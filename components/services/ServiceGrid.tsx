@@ -17,8 +17,8 @@ const SERVICES = [
     },
     {
         title: "FIELD OPERATIONS",
-        desc: "Mobile AC/DC TIG & Hoist. We come to the site.",
-        image: "/Mobile-Hoist.jpg",
+        desc: "Mobile AC/DC TIG & Fabrication. We come to the site.",
+        image: "/LandingPage/559888642_1252061006960170_6531427943297458992_n.jpg",
         link: "/services/mobile-repair"
     },
     {
@@ -39,13 +39,14 @@ export default function ServiceGrid() {
                         <ScrollSpotlight
                             key={i}
                             activeClassName="spotlight-active"
+                            inactiveClassName="max-md:border-white/10 max-md:opacity-50"
                         >
                             <Link href={service.link} className="group relative h-[450px] overflow-hidden border border-white/5 block">
                                 <ScrollImage
                                     src={service.image}
                                     alt={service.title}
                                     fill
-                                    className="object-cover group-hover:scale-110"
+                                    className="object-cover group-hover:scale-110 md:group-hover:grayscale-0"
                                     containerClassName="absolute inset-0 w-full h-full"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent" />

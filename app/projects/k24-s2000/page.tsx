@@ -61,7 +61,7 @@ export default function K24S2000Page() {
 
                 <div className="prose prose-invert prose-lg max-w-none mt-8">
                     <p>
-                        We engineered a custom &quot;Sidewinder&quot; style manifold using SCH10 304 Stainless Steel. By carefully routing the runners forward and mounting the BorgWarner EFR 8374 aside the engine block, we cleared the OEM A/C lines and the frame rail.
+                        We fabricated a custom &quot;Sidewinder&quot; style manifold using SCH10 304 Stainless Steel. By carefully routing the runners forward and mounting the BorgWarner EFR 8374 aside the engine block, we cleared the OEM A/C lines and the frame rail.
                     </p>
                 </div>
             </section>

@@ -25,7 +25,7 @@ export default function TheShopPage() {
                 </div>
 
                 <div className="relative z-20 max-w-[1400px] mx-auto px-6 w-full text-center">
-                    <h1 className="text-5xl md:text-8xl font-heading font-bold text-white uppercase tracking-widest leading-none mb-4">
+                    <h1 className="text-3xl md:text-8xl font-heading font-bold text-white uppercase tracking-widest leading-none mb-4">
                         Headquarters
                     </h1>
                     <p className="text-stainless text-lg md:text-xl font-mono uppercase tracking-widest border-t border-white/20 pt-4 mt-4 inline-block">
@@ -50,7 +50,7 @@ export default function TheShopPage() {
                                 With a background in competitive motorsports, Bob Dudenhoeffer understands that a weld isn&apos;t just structural - it&apos;s safety. We build cars that perform on the track, not just the trailer.
                             </p>
                             <p>
-                                Every chassis we jig, every engine we blueprint, and every cage we weld is executed with the understanding that it will be pushed to the limit. We don&apos;t just fabricate; we engineer for speed.
+                                Every chassis we jig, every engine we blueprint, and every cage we weld is executed with the understanding that it will be pushed to the limit. We don&apos;t just fabricate; we build for speed.
                             </p>
                         </div>
                     </div>
@@ -80,7 +80,7 @@ export default function TheShopPage() {
                         {[
                             {
                                 category: "Welding & Alloy",
-                                items: ["Everlast EXT 255 (AC/DC TIG)", "Everlast 253 DPI", "Back-Purge Flow Meters", "Mobile Hoist & TIG Setup"]
+                                items: ["Everlast EXT 255 (AC/DC TIG)", "Everlast 253 DPI", "Back-Purge Flow Meters", "Mobile Fabrication Unit"]
                             },
                             {
                                 category: "Fabrication",

@@ -12,7 +12,7 @@ export default function Philosophy() {
                         <h2 className="text-4xl md:text-6xl font-heading text-white uppercase leading-tight mb-8">
                             We Don&apos;t Just Build Cars; <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-stainless">
-                                We Engineer Solutions.
+                                We Fabricate Solutions.
                             </span>
                         </h2>
                         <p className="text-stainless/80 text-lg leading-relaxed max-w-xl mb-12">
@@ -54,6 +54,6 @@ export default function Philosophy() {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 }

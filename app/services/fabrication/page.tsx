@@ -72,7 +72,7 @@ export default function FabricationPage() {
                         <span className="text-blue-400">⚡</span> Structural Reinforcement
                     </h3>
                     <p className="text-stainless mb-4 text-sm max-w-2xl">
-                        We don&apos;t just patch; we reinforce. Whether it&apos;s a cracked aluminum boat hull or a heavy equipment boom, our repairs are engineered to be stronger than the factory original.
+                        We don&apos;t just patch; we reinforce. Whether it&apos;s a cracked aluminum boat hull or a heavy equipment boom, our repairs are built to be stronger than the factory original.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-white font-mono">
                         <div className="bg-carbon border border-white/10 p-3">Aluminum Boat Hulls</div>

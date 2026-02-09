@@ -5,7 +5,7 @@ import Philosophy from "@/components/Philosophy";
 import Footer from "@/components/Footer";
 import MacroStrip from "@/components/MacroStrip";
 import FreshFromBench from "@/components/FreshFromBench";
-import MobileFeature from "@/components/home/MobileFeature";
+import PerformanceFeature from "@/components/home/PerformanceFeature";
 import fs from "fs";
 import path from "path";
 
@@ -31,7 +31,7 @@ export default async function Home() {
       <MacroStrip images={images} />
       <ServiceGrid />
 
-      <MobileFeature />
+      <PerformanceFeature />
 
       <FreshFromBench />
       <Philosophy />

@@ -47,6 +47,7 @@ export default function ScrollImage({
 
                     // Mobile Behavior (max-md):
                     // We use the `isInView` state to toggle classes specifically for mobile
+                    // On desktop, we rely on the group-hover logic defined in parent or default state
                     isInView
                         ? "max-md:grayscale-0 max-md:scale-[1.02]" // Active (In Center)
                         : "max-md:grayscale max-md:scale-100",    // Inactive

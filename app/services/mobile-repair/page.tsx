@@ -24,7 +24,8 @@ export default function MobileRepairPage() {
         { label: "Capabilities", value: "Aluminum / Carbon / Stainless" },
         { label: "Rate", value: "$120/hr (Port-to-Port)" },
         { label: "Emergency", value: "24/7 Availability" },
-        { label: "Lifting Capacity", value: "5,000 lbs (Mobile Hoist)" },
+
+        { label: "Site Safety", value: "Full PPE & Liability Insured" },
     ];
 
     // 4. Material Expertise

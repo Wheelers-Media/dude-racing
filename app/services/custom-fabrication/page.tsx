@@ -34,7 +34,7 @@ export default function CustomFabricationPage() {
             leadTime="3-4 Weeks"
         >
             <p className="text-white text-lg leading-relaxed mb-6 font-light">
-                <strong className="text-white font-bold">We don&apos;t do &quot;good enough&quot;.</strong> At DudeRacing, custom fabrication is about solving complex packaging constraints while maximizing flow and durability. Whether it&apos;s a twin-turbo manifold for a K-Swap or a titanium exhaust for a supercar, the process is the same: rigorous engineering and artistic execution.
+                <strong className="text-white font-bold">We don&apos;t do &quot;good enough&quot;.</strong> At DudeRacing, custom fabrication is about solving complex packaging constraints while maximizing flow and durability. Whether it&apos;s a twin-turbo manifold for a K-Swap or a titanium exhaust for a supercar, the process is the same: rigorous development and artistic execution.
             </p>
             <p className="text-stainless text-lg leading-relaxed font-light">
                 Our shop is equipped with industry-leading Miller Dynasty welders, extensive fixturing tables, and the material selection to handle any motorsport application.
