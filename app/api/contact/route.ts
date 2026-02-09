@@ -4,10 +4,11 @@ import { Resend } from 'resend';
 export async function POST(request: Request) {
     try {
         const apiKey = process.env.RESEND_API_KEY;
-        const toEmail = process.env.RESEND_TO_EMAIL;
+        // Priority: Env Var > Hardcoded Fallback
+        const toEmail = process.env.RESEND_TO_EMAIL || 'duderacinginc@outlook.com';
 
-        if (!apiKey || !toEmail) {
-            console.error("RESEND_API_KEY or RESEND_TO_EMAIL is missing from environment variables.");
+        if (!apiKey) {
+            console.error("RESEND_API_KEY is missing from environment variables.");
             return NextResponse.json({ error: 'Server Misconfiguration: Missing Email Config' }, { status: 500 });
         }
 

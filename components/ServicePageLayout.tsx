@@ -133,8 +133,8 @@ export default function ServicePageLayout({
                                         className="bg-carbon p-6 flex justify-between items-center group hover:bg-white/5 transition-colors"
                                         activeClassName="max-md:bg-white/5 max-md:border-l-4 max-md:border-signal"
                                     >
-                                        <span className="text-xs uppercase tracking-widest text-stainless">{spec.label}</span>
-                                        <span className="font-mono text-white text-sm">{spec.value}</span>
+                                        <span className="text-xs uppercase tracking-widest text-stainless mr-4">{spec.label}</span>
+                                        <span className="font-mono text-white text-sm text-right flex-1">{spec.value}</span>
                                     </ScrollSpotlight>
                                 ))}
                             </div>
