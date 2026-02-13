@@ -11,7 +11,6 @@ export default function LsTurboManifoldsPage() {
     const { openModal } = useInquiryModal();
     const productName = "Gen III/IV LS Turbo Manifolds";
 
-    // Image paths - ensure these match your public folder structure
     const images = [
         "/Supply/ls-turbo-manifolds/DSC07250.jpg",
         "/Supply/ls-turbo-manifolds/DSC07253.jpg",
@@ -47,7 +46,6 @@ export default function LsTurboManifoldsPage() {
                                 className="absolute inset-0 bg-cover bg-center transition-all duration-500"
                                 style={{ backgroundImage: `url('${images[activeImage]}')` }}
                             />
-                            {/* Overlay texture or sheen */}
                             <div className="absolute inset-0 bg-white/5 pointer-events-none" />
                         </div>
 
@@ -85,7 +83,7 @@ export default function LsTurboManifoldsPage() {
                             <span className="text-sm text-stainless font-mono uppercase tracking-widest">Built to Order</span>
                         </div>
 
-                        {/* UPDATED DESCRIPTION BLOCK */}
+                        {/* Description Block */}
                         <div className="prose prose-invert max-w-none text-stainless mb-8">
                             <p className="leading-relaxed">
                                 Fabricated for maximum flow and durability. These are <strong>Custom High-Mount</strong> manifolds designed to fit <strong>all LS Platforms</strong>.
@@ -102,7 +100,7 @@ export default function LsTurboManifoldsPage() {
                         {/* Key Features */}
                         <ul className="space-y-3 mb-10">
                             {[
-                                "304 Stainless Schedule 10 (USA Sourced)",
+                                "304 Stainless Steel (Schedule 10)", // EDITED: Removed 'USA Sourced'
                                 "1/2\" Billet Flanges (Warp-Free)",
                                 "Lifetime Repair Warranty",
                                 "Fits All LS Platforms (Custom Install)",
@@ -156,8 +154,8 @@ export default function LsTurboManifoldsPage() {
                                     { label: "Material", value: "304 Stainless Steel (Schedule 10)" },
                                     { label: "Flange Type", value: "T4 Open/Divided or V-Band (Selectable)" },
                                     { label: "Wastegate Port", value: "Dual 44mm / 45mm / 50mm (Configurable)" },
-                                    { label: "Primary Size", value: "1-3/4\" Nominal Pipe Size" },
-                                    { label: "Collector", value: "Merge Collector with slip-fit crossover" },
+                                    { label: "Primary Size", value: "1-1/2\" Nominal Pipe Size" }, // EDITED: Changed to 1.5"
+                                    { label: "Collector", value: "High-Flow Merge Collector" }, // EDITED: Removed 'slip-fit crossover'
                                     { label: "Warranty", value: "Lifetime Repair Warranty against cracking" }
                                 ].map((row, i) => (
                                     <tr key={i} className="hover:bg-white/5 transition-colors">
