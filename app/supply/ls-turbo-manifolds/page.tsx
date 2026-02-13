@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useInquiryModal } from "@/context/InquiryModalContext";
@@ -12,6 +11,7 @@ export default function LsTurboManifoldsPage() {
     const { openModal } = useInquiryModal();
     const productName = "Gen III/IV LS Turbo Manifolds";
 
+    // Image paths - ensure these match your public folder structure
     const images = [
         "/Supply/ls-turbo-manifolds/DSC07250.jpg",
         "/Supply/ls-turbo-manifolds/DSC07253.jpg",
@@ -47,7 +47,7 @@ export default function LsTurboManifoldsPage() {
                                 className="absolute inset-0 bg-cover bg-center transition-all duration-500"
                                 style={{ backgroundImage: `url('${images[activeImage]}')` }}
                             />
-                            {/* Overlay texture or sheen if desired */}
+                            {/* Overlay texture or sheen */}
                             <div className="absolute inset-0 bg-white/5 pointer-events-none" />
                         </div>
 
@@ -85,11 +85,16 @@ export default function LsTurboManifoldsPage() {
                             <span className="text-sm text-stainless font-mono uppercase tracking-widest">Built to Order</span>
                         </div>
 
+                        {/* UPDATED DESCRIPTION BLOCK */}
                         <div className="prose prose-invert max-w-none text-stainless mb-8">
                             <p className="leading-relaxed">
-                                Fabricated for maximum flow and durability. Our <strong>High Mount</strong> LS turbo manifolds are hand-built from Schedule 10 304 Stainless Steel, designed to clear almost all engine bay setups while withstanding the extreme heat cycles of high-performance applications.
+                                Fabricated for maximum flow and durability. These are <strong>Custom High-Mount</strong> manifolds designed to fit <strong>all LS Platforms</strong>.
                             </p>
-                            <p className="text-sm mt-2 text-white/80">
+                            <p className="leading-relaxed mt-4 border-l-2 border-signal pl-4 bg-white/5 p-3 rounded-r-sm">
+                                <strong className="text-white block mb-1">⚠️ Fitment Note:</strong> 
+                                This is a custom installation. The high-mount design positions the turbos level with the valve covers, which <strong>will require hood trimming</strong> on most applications.
+                            </p>
+                            <p className="text-sm mt-4 text-white/80">
                                 <span className="text-signal">*</span> Jig-fixtured for precise fitment and back-purged for clean, strong internal welds.
                             </p>
                         </div>
@@ -98,8 +103,9 @@ export default function LsTurboManifoldsPage() {
                         <ul className="space-y-3 mb-10">
                             {[
                                 "304 Stainless Schedule 10 (USA Sourced)",
-                                "1/2\" Billet Flanges (Warp-Free)", // UPDATED: Removed 'Machined Flat'
-                                "Lifetime Repair Warranty against cracking",         // UPDATED: Changed to 'Repair'
+                                "1/2\" Billet Flanges (Warp-Free)",
+                                "Lifetime Repair Warranty",
+                                "Fits All LS Platforms (Custom Install)",
                                 "T4 or V-Band Entry Options"
                             ].map((feature, i) => (
                                 <li key={i} className="flex items-center gap-3 text-sm font-mono text-white uppercase tracking-wider">
@@ -145,13 +151,14 @@ export default function LsTurboManifoldsPage() {
                             </thead>
                             <tbody className="divide-y divide-white/5">
                                 {[
-                                    { label: "Fitment", value: "Gen III/IV LS Engines (LS1, LS2, LS3, LS6, LQ4, LQ9)" },
+                                    { label: "Fitment", value: "All Gen III/IV LS Platforms (Requires Custom Install)" },
+                                    { label: "Turbo Position", value: "High Mount (Level with Valve Covers)" },
                                     { label: "Material", value: "304 Stainless Steel (Schedule 10)" },
                                     { label: "Flange Type", value: "T4 Open/Divided or V-Band (Selectable)" },
                                     { label: "Wastegate Port", value: "Dual 44mm / 45mm / 50mm (Configurable)" },
                                     { label: "Primary Size", value: "1-3/4\" Nominal Pipe Size" },
                                     { label: "Collector", value: "Merge Collector with slip-fit crossover" },
-                                    { label: "Warranty", value: "Lifetime Limited Warranty against cracking" }
+                                    { label: "Warranty", value: "Lifetime Repair Warranty against cracking" }
                                 ].map((row, i) => (
                                     <tr key={i} className="hover:bg-white/5 transition-colors">
                                         <td className="py-4 px-6 text-sm font-bold text-white uppercase tracking-wide">{row.label}</td>
