@@ -13,7 +13,6 @@ export default function LsTurboManifoldsPage() {
 
     const images = [
         "/Supply/ls-turbo-manifolds/DSC07250.jpg",
-        "/Supply/ls-turbo-manifolds/DSC07253.jpg",
         "/Supply/ls-turbo-manifolds/DSC07256.jpg",
         "/Supply/ls-turbo-manifolds/DSC07258.jpg",
         "/Supply/ls-turbo-manifolds/DSC07261.jpg"
