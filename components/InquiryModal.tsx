@@ -101,7 +101,8 @@ export default function InquiryModal({ isOpen, onClose, initialType, productName
                     color: initialType === 'product' ? formData.color : undefined,
                     size: initialType === 'product' ? formData.size : undefined,
                     quantity: initialType === 'product' ? formData.quantity : undefined,
-                    delivery: initialType === 'product' ? formData.delivery : undefined
+                    delivery: initialType === 'product' ? formData.delivery : undefined,
+                    vehicle: initialType === 'product' ? formData.vehicle : undefined
                 }
             };
 
@@ -265,6 +266,36 @@ export default function InquiryModal({ isOpen, onClose, initialType, productName
                                         </div>
                                     </div>
 
+                                    {/* Vehicle Information (Crucial for Turbo Manifolds) */}
+                                    <div className="space-y-2 pt-4 border-t border-white/10">
+                                        <label className="text-xs uppercase tracking-widest text-stainless block font-bold mb-4 flex items-center gap-2">
+                                            Vehicle Information
+                                        </label>
+                                        <div className="grid grid-cols-3 gap-3">
+                                            <input
+                                                type="text"
+                                                placeholder="Year"
+                                                value={formData.vehicle.year}
+                                                onChange={(e) => handleVehicleChange("year", e.target.value)}
+                                                className="bg-page-bg border border-white/20 text-white p-3 rounded-none focus:border-white outline-none font-mono text-sm"
+                                            />
+                                            <input
+                                                type="text"
+                                                placeholder="Make"
+                                                value={formData.vehicle.make}
+                                                onChange={(e) => handleVehicleChange("make", e.target.value)}
+                                                className="bg-page-bg border border-white/20 text-white p-3 rounded-none focus:border-white outline-none font-mono text-sm"
+                                            />
+                                            <input
+                                                type="text"
+                                                placeholder="Model"
+                                                value={formData.vehicle.model}
+                                                onChange={(e) => handleVehicleChange("model", e.target.value)}
+                                                className="bg-page-bg border border-white/20 text-white p-3 rounded-none focus:border-white outline-none font-mono text-sm"
+                                            />
+                                        </div>
+                                    </div>
+
                                     {/* Contact Section */}
                                     <div className="space-y-2 pt-4 border-t border-white/10">
                                         <label className="text-xs uppercase tracking-widest text-stainless block font-bold mb-4 flex items-center gap-2">
@@ -283,7 +314,7 @@ export default function InquiryModal({ isOpen, onClose, initialType, productName
                                             <input
                                                 required
                                                 type="tel"
-                                                placeholder="Phone (For Friday Shipping)"
+                                                placeholder="Phone #"
                                                 value={formData.phone}
                                                 onChange={(e) => handleInputChange("phone", e.target.value)}
                                                 className="w-full bg-page-bg border border-white/20 text-white p-3 rounded-none focus:border-white outline-none font-mono text-sm"

@@ -2,9 +2,10 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Package, Mail } from "lucide-react";
+import { Package, Mail, ArrowRight } from "lucide-react";
 import { useInquiryModal } from "@/context/InquiryModalContext";
 import { products } from "@/lib/products";
+import Link from "next/link";
 
 export default function ShopPage() {
     const { openModal } = useInquiryModal();
@@ -70,13 +71,24 @@ export default function ShopPage() {
                                 </div>
 
                                 {/* Form Inquiry */}
-                                <button
-                                    onClick={() => openModal('product', product.name)}
-                                    className="w-full bg-white text-black font-heading font-bold uppercase py-4 tracking-widest hover:bg-stainless transition-colors flex items-center justify-center gap-2 cursor-pointer"
-                                >
-                                    <Mail className="w-4 h-4" />
-                                    Order Direct
-                                </button>
+                                {/* Form Inquiry or Link */}
+                                {product.link ? (
+                                    <Link
+                                        href={product.link}
+                                        className="w-full bg-white text-black font-heading font-bold uppercase py-4 tracking-widest hover:bg-stainless transition-colors flex items-center justify-center gap-2"
+                                    >
+                                        <ArrowRight className="w-4 h-4" />
+                                        View Details
+                                    </Link>
+                                ) : (
+                                    <button
+                                        onClick={() => openModal('product', product.name)}
+                                        className="w-full bg-white text-black font-heading font-bold uppercase py-4 tracking-widest hover:bg-stainless transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                                    >
+                                        <Mail className="w-4 h-4" />
+                                        Order Direct
+                                    </button>
+                                )}
                             </div>
                         </div>
                     ))}

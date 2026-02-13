@@ -46,11 +46,12 @@ export async function POST(request: Request) {
                     <li><strong>Quantity:</strong> ${quantity || '1'}</li>
                     <li><strong>Delivery Preference:</strong> ${delivery}</li>
                     <li><br/></li>
+                    <li><strong>Vehicle:</strong> ${vehicle?.year || ''} ${vehicle?.make || ''} ${vehicle?.model || ''}</li>
                     <li><strong>Customer Name:</strong> ${name}</li>
                     <li><strong>Phone:</strong> ${phone}</li>
                     <li><strong>Email:</strong> ${email}</li>
                 </ul>
-                <p><strong>Note:</strong> Customer is interested in direct order for ${productName}. They have chosen ${delivery} and would like ${quantity} ${size ? `(Size: ${size})` : ''} in ${color}.</p>
+                <p><strong>Note:</strong> Customer is interested in direct order for ${productName}. They have chosen ${delivery} and would like ${quantity} ${size ? `(Size: ${size})` : ''} in ${color}. Vehicle: ${vehicle?.year} ${vehicle?.make} ${vehicle?.model}</p>
             `;
         } else if (type === 'service') {
             htmlBody += `

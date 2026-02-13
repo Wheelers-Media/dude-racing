@@ -10,6 +10,7 @@ export interface Product {
         sizes?: string[];
     };
     category: 'apparel' | 'accessory' | 'other';
+    link?: string;
 }
 
 export const products: Product[] = [
@@ -58,5 +59,15 @@ export const products: Product[] = [
             colors: ["Black Anodized"]
         },
         category: 'accessory'
+    },
+    {
+        id: 5,
+        name: "Gen III/IV LS Turbo Manifolds",
+        variant: "Schedule 10 / Jig-Fixtured / Back-Purged",
+        price: "$3,950.00 CAD",
+        image: "/Supply/ls-turbo-manifolds/DSC07250.jpg",
+        badge: "Built to Order",
+        category: 'other',
+        link: "/supply/ls-turbo-manifolds"
     }
 ];
